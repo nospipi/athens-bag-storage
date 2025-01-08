@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import AppContextProvider from "@/providers/ContextProvider";
+//import AppContextProvider from "@/providers/ContextProvider";
+import ThemeProvider from "@/providers/ThemeProvider";
 import "./globals.css";
 
 //-------------------------------------------------------------------------
@@ -21,9 +22,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={montserrat.className}>
-        <AppContextProvider>{children}</AppContextProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

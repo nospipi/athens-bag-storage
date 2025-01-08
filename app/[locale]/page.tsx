@@ -1,6 +1,7 @@
 import getIntl from "@/app/intl";
 import { SupportedLocales } from "@/locales";
 import LanguageChanger from "@/app/components/LanguageChanger";
+import Hero from "../components/Hero";
 
 //----------------------------------------------
 
@@ -14,8 +15,9 @@ const Page = async ({
   const intl = await getIntl(locale);
 
   return (
-    <main>
+    <main className="page-container">
       <h1>{intl.formatMessage({ id: "homepage_header" })}</h1>
+      <Hero />
       <LanguageChanger />
     </main>
   );
