@@ -10,9 +10,9 @@ type Props = {
   params: Promise<{ locale: SupportedLocales }>;
 };
 
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
+// export function generateStaticParams() {
+//   return routing.locales.map((locale) => ({ locale }));
+// }
 
 export async function generateMetadata({ params }: Omit<Props, "children">) {
   const { locale } = await params;

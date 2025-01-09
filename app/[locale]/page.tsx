@@ -17,3 +17,17 @@ export default async function IndexPage({ params }: Props) {
 
   return <div>{translations("hello")}</div>;
 }
+
+
+// import { useTranslations, useLocale } from "next-intl";
+// import { Link } from "@/app/i18n/routing";
+
+// export default function HomePage() {
+//   const translations = useTranslations();
+
+//   return (
+//     <div>
+//       <h1>{translations("homepage_header")}</h1>
+//     </div>
+//   );
+// }
