@@ -1,5 +1,10 @@
 {
   "hello": "Hello World!",
+  "select_language": "Select language",
+  "en": "English",
+  "de": "German",
+  "fr": "French",
+  "es": "Spanish",
   "HomePage": {
     "title": "Hello world!",
     "about": "Go to the about page"

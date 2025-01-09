@@ -1,5 +1,10 @@
 {
   "hello": "Hallo Welt!",
+  "select_language": "Sprache auswählen",
+  "en": "Englisch",
+  "de": "Deutsch",
+  "fr": "Französisch",
+  "es": "Spanisch",
   "HomePage": {
     "title": "Hallo Welt!",
     "about": "Gehe zur Über-Seite"
