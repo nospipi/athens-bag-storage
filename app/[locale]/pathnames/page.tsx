@@ -1,11 +1,11 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import PageLayout from "@/app/components/PageLayout";
-import { SupportedLocales } from "@/locales";
+import { SupportedLocaleTypes } from "@/locales";
 
 //-------------------------------------------------------------------
 
 type Props = {
-  params: Promise<{ locale: SupportedLocales }>;
+  params: Promise<{ locale: SupportedLocaleTypes }>;
 };
 
 export default async function PathnamesPage({ params }: Props) {

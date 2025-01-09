@@ -4,5 +4,7 @@
   "en": "Anglais",
   "de": "Allemand",
   "fr": "Français",
-  "es": "Espagnol"
+  "es": "Espagnol",
+  "not_found_message": "La page n'a pas pu être trouvée.",
+  "error_message": "Une erreur s'est produite."
 }

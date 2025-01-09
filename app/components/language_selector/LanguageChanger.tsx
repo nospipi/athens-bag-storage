@@ -10,7 +10,7 @@ import DrawerHeaderClient from "./DrawerHeader.client";
 
 //-------------------------------------------------------------------------
 
-export default function LanguageSelectDrawer() {
+export default function LanguageChanger() {
   return (
     <Drawer>
       <DrawerTrigger asChild>
@@ -23,7 +23,7 @@ export default function LanguageSelectDrawer() {
         <div className="mx-auto w-full max-w-sm p-2">
           <DrawerHeaderClient />
           <div className="grid grid-cols-2 gap-2">
-            <LanguageButton locale="en" icon="gb" />
+            <LanguageButton locale="en" icon="en-us" />
             <LanguageButton locale="es" icon="es" />
             <LanguageButton locale="fr" icon="fr" />
             <LanguageButton locale="de" icon="de" />
