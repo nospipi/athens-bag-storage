@@ -1,20 +1,17 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button.client";
 
 import {
   Drawer,
   DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
   DrawerTrigger,
-} from "@/components/ui/drawer";
+} from "@/components/ui/drawer.client";
 import { CiGlobe } from "react-icons/ci";
-import LanguageButton from "./LanguageButton";
+import LanguageButton from "./LanguageButton.client";
+import DrawerHeaderClient from "./DrawerHeader.client";
 
 //-------------------------------------------------------------------------
 
-export default function LanguageChanger() {
+export default function LanguageSelectDrawer() {
   return (
     <Drawer>
       <DrawerTrigger asChild>
@@ -25,12 +22,12 @@ export default function LanguageChanger() {
 
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm p-1 mb-2">
-          <DrawerHeader>
-            <DrawerTitle className="text-center">Select Language</DrawerTitle>
-            {/* <DrawerDescription>Set your daily activity goal.</DrawerDescription> */}
-          </DrawerHeader>
+          <DrawerHeaderClient />
           <div className="flex gap-1 flex-wrap">
-            <LanguageButton />
+            <LanguageButton locale="en" icon="gb" />
+            <LanguageButton locale="es" icon="es" />
+            <LanguageButton locale="fr" icon="fr" />
+            <LanguageButton locale="de" icon="de" />
           </div>
         </div>
       </DrawerContent>

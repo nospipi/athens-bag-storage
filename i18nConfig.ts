@@ -7,7 +7,7 @@ interface I18nConfig {
 }
 
 const i18nConfig: I18nConfig = {
-  locales: ["en", "de", "fr"],
+  locales: ["en", "de", "fr", "es"],
   defaultLocale: "en",
   prefixDefault: true,
 };

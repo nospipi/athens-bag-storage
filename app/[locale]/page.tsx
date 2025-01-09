@@ -1,7 +1,8 @@
 import getIntl from "@/app/intl";
 import { SupportedLocales } from "@/locales";
-import LanguageChanger from "@/app/components/LanguageChanger";
-import Hero from "../components/Hero";
+import LanguageSelectDrawer from "@/app/components/language_selector/LanguageChanger";
+import ServerIntlProvider from "@/providers/ServerIntlProvider.client";
+import Hero from "../components/Hero.client";
 
 //----------------------------------------------
 
@@ -15,11 +16,13 @@ const Page = async ({
   const intl = await getIntl(locale);
 
   return (
-    <main className="page-container">
-      <h1>{intl.formatMessage({ id: "homepage_header" })}</h1>
-      <Hero />
-      <LanguageChanger />
-    </main>
+    <ServerIntlProvider messages={intl.messages} locale={intl.locale}>
+      <main className="page-container">
+        <h1>{intl.formatMessage({ id: "homepage_header" })}</h1>
+        <Hero />
+        <LanguageSelectDrawer />
+      </main>
+    </ServerIntlProvider>
   );
 };
 
