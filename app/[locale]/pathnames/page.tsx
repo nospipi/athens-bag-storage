@@ -2,29 +2,29 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import PageLayout from "@/app/components/PageLayout";
 import { SupportedLocales } from "@/locales";
 
-//----------------------------------------------------------------------
+//-------------------------------------------------------------------
 
 type Props = {
   params: Promise<{ locale: SupportedLocales }>;
 };
 
-export default async function IndexPage({ params }: Props) {
+export default async function PathnamesPage({ params }: Props) {
   const { locale } = await params;
 
   // Enable static rendering
   setRequestLocale(locale);
-
-  const t = await getTranslations("IndexPage");
+  const t = await getTranslations("PathnamesPage");
 
   return (
     <PageLayout title={t("title")}>
-      <p className="max-w-[590px]">
+      <div className="max-w-[490px]">
         {t.rich("description", {
+          p: (chunks) => <p className="mt-4">{chunks}</p>,
           code: (chunks) => (
             <code className="font-mono text-white">{chunks}</code>
           ),
         })}
-      </p>
+      </div>
     </PageLayout>
   );
 }
