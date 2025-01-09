@@ -1,5 +1,8 @@
 {
   "homepage_header": "Hola desde español !",
   "select_language": "Seleccionar idioma",
-  "en": "Inglés"
+  "en": "Inglés",
+  "de": "Alemán",
+  "fr": "Francés",
+  "es": "Español"
 }

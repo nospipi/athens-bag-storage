@@ -1,5 +1,8 @@
 {
   "homepage_header": "Guten tag auf Deutsch !",
   "select_language": "Sprache auswählen",
-  "en": "Englisch"
+  "en": "Englisch",
+  "de": "Deutsch",
+  "fr": "Französisch",
+  "es": "Spanisch"
 }

@@ -1,5 +1,8 @@
 {
   "homepage_header": "Hello in English !",
   "select_language": "Select language",
-  "en": "English"
+  "en": "English",
+  "de": "German",
+  "fr": "French",
+  "es": "Spanish"
 }

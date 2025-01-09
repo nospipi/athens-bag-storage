@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -34,8 +31,6 @@
     --chart-5: 27 87% 67%;
   }
 }
-
-
 
 * {
   box-sizing: border-box;

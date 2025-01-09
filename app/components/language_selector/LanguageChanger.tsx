@@ -1,10 +1,16 @@
 import { Button } from "@/components/ui/button.client";
-
+import { useTranslations } from "react-intl";
 import {
   Drawer,
   DrawerContent,
   DrawerTrigger,
 } from "@/components/ui/drawer.client";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip.client";
 import { CiGlobe } from "react-icons/ci";
 import LanguageButton from "./LanguageButton.client";
 import DrawerHeaderClient from "./DrawerHeader.client";
@@ -12,18 +18,25 @@ import DrawerHeaderClient from "./DrawerHeader.client";
 //-------------------------------------------------------------------------
 
 export default function LanguageSelectDrawer() {
+  const t = useTranslations("NotFoundPage");
   return (
     <Drawer>
-      <DrawerTrigger asChild>
-        <Button variant="outline" size="icon" className="rounded-full">
-          <CiGlobe />
-        </Button>
-      </DrawerTrigger>
-
+      <TooltipProvider delayDuration={0}>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <DrawerTrigger asChild>
+              <Button variant="outline" size="icon" className="rounded-full">
+                <CiGlobe />
+              </Button>
+            </DrawerTrigger>
+          </TooltipTrigger>
+          <TooltipContent>Select Language</TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
       <DrawerContent>
-        <div className="mx-auto w-full max-w-sm p-1 mb-2">
+        <div className="mx-auto w-full max-w-sm p-2">
           <DrawerHeaderClient />
-          <div className="flex gap-1 flex-wrap">
+          <div className="grid grid-cols-2 gap-2">
             <LanguageButton locale="en" icon="gb" />
             <LanguageButton locale="es" icon="es" />
             <LanguageButton locale="fr" icon="fr" />

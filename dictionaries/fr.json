@@ -1,5 +1,8 @@
 {
   "homepage_header": "Bonne journée en français !",
   "select_language": "Choisir la langue",
-  "en": "Anglais"
+  "en": "Anglais",
+  "de": "Allemand",
+  "fr": "Français",
+  "es": "Espagnol"
 }
