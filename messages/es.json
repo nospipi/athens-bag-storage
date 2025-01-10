@@ -6,5 +6,9 @@
   "fr": "Francés",
   "es": "Español",
   "not_found_message": "No se pudo encontrar la página.",
-  "error_message": "Se ha producido un error."
+  "error_message": "Se ha producido un error.",
+  "how_to_find_us": "Cómo encontrarnos",
+  "contact_us": "Contáctenos",
+  "terms_of_service": "Términos de servicio",
+  "questions": "Preguntas"
 }
