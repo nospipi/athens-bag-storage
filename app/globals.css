@@ -14,7 +14,7 @@
   margin: 0;
 }
 
-body {
+html, body {
   max-height: 100dvh;
   min-height: 100dvh;
 }
