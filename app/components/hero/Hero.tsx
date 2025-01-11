@@ -13,7 +13,7 @@ const Hero = async ({ locale }: { locale: SupportedLocaleTypes }) => {
   const translations = await getTranslations();
 
   return (
-    <section className="hero py-10 lg:py-28 w-full h-screen bg-gradient-to-b from-white/0 to-blue-300 flex justify-center items-center h-sm:items-end relative">
+    <section className="hero py-10 lg:py-28 w-full h-[100dvh] bg-gradient-to-b from-white/0 to-blue-300 flex justify-center items-center h-sm:items-end relative">
       <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between">
           <div className="lg:w-1/2 flex flex-col items-start gap-6">
