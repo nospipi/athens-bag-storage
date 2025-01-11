@@ -21,16 +21,16 @@ export default async function IndexPage({ params }: Props) {
   return (
     <div className="w-full h-screen">
       <Header locale={locale} />
-      <Hero />
+      <Hero locale={locale} />
       <div
         id={_.kebabCase(translations("how_to_find_us"))}
-        className="w-full h-screen bg-gradient-to-b from-blue-300 to-pink-300"
+        className="w-full h-screen bg-gradient-to-b from-blue-300 to-pink-300/30"
       >
         MAP
       </div>
       <div
         id={_.kebabCase(translations("contact_us"))}
-        className="w-full h-screen"
+        className="w-full h-screen bg-gradient-to-b from-pink-300/30 to-blue-300"
       >
         CONTACT US
       </div>
