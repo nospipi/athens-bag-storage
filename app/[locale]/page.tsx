@@ -19,18 +19,18 @@ export default async function IndexPage({ params }: Props) {
   const translations = await getTranslations();
 
   return (
-    <div className="w-full h-screen h-[calc(100vh-env(safe-area-inset-bottom))] ">
+    <div className="w-full h-[100dvh] h-[calc(100vh-env(safe-area-inset-bottom))] ">
       <Header locale={locale} />
       <Hero locale={locale} />
       <div
         id={_.kebabCase(translations("how_to_find_us"))}
-        className="w-full h-screen bg-gradient-to-b from-blue-300 to-pink-300/30"
+        className="w-full h-[100dvh] bg-gradient-to-b from-blue-300 to-pink-300/30"
       >
         MAP
       </div>
       <div
         id={_.kebabCase(translations("contact_us"))}
-        className="w-full h-screen bg-gradient-to-b from-pink-300/30 to-blue-300"
+        className="w-full h-[100dvh] bg-gradient-to-b from-pink-300/30 to-blue-300"
       >
         CONTACT US
       </div>
