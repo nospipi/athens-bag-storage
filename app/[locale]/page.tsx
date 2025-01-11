@@ -19,7 +19,7 @@ export default async function IndexPage({ params }: Props) {
   const translations = await getTranslations();
 
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-screen h-[calc(100vh-env(safe-area-inset-bottom))] ">
       <Header locale={locale} />
       <Hero locale={locale} />
       <div
