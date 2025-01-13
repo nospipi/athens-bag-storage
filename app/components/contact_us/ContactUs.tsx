@@ -35,7 +35,7 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
       <div className="flex flex-col flex-1 p-4 gap-4">
         <div className="flex flex-row flex-wrap gap-4">
           <a
-            href={`https://www.google.com/maps/place/37.985727121782325,23.71909543003348`}
+            href={`tel:+306947845332`}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-500 text-gray-900 font-semibold py-3 px-5 rounded-full shadow-lg transition transform hover:scale-105 self-start text-white flex flex-row gap-4 items-center"
@@ -44,7 +44,7 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
             <span>+30 6941788654</span>
           </a>
           <a
-            href={`https://www.google.com/maps/place/37.985727121782325,23.71909543003348`}
+            href={`tel:+306947845332`}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-500 text-gray-900 font-semibold py-3 px-5 rounded-full shadow-lg transition transform hover:scale-105 self-start text-white flex flex-row gap-4 items-center"
