@@ -8,11 +8,19 @@
   "not_found_message": "Die Seite konnte nicht gefunden werden.",
   "error_message": "Ein Fehler ist aufgetreten.",
   "how_to_find_us": "So finden Sie uns",
+  "how_to_find_us_explainer": "Unsere Einrichtungen befinden sich im Metaxourgeio-Gebiet in der Nähe des Omonoia-Platzes, des Syntagma-Platzes und des Monastiraki-Platzes und sind leicht mit öffentlichen Verkehrsmitteln zu erreichen.",
   "contact_us": "Kontaktiere uns",
   "terms_of_service": "Nutzungsbedingungen",
   "questions": "Fragen",
   "hero_heading": "Bequeme Gepäckaufbewahrung in der Innenstadt von Athen",
   "hero_subheading": "Erkunden Sie Athen, ohne Ihr Gepäck tragen zu müssen. Sichere, geschützte und einfache Aufbewahrung für alle Ihre Reisebedürfnisse.",
   "hero_button": "Finden Sie uns auf der Karte",
-  "hero_address": "12 Lenorman, 10436, Athen, Griechenland"
+  "hero_address": "12 Lenorman, 10436, Athen, Griechenland",
+  "navigate": "Klicken Sie zum Navigieren",
+  "frequently_asked_questions": "Häufig gestellte Fragen",
+  "find_answers_to_common_questions": "Erhalten Sie schnelle Antworten auf die Fragen, die uns am häufigsten gestellt werden.",
+  "faq_where_should_leave_luggage_question": "Wo soll ich mein Gepäck in Athen lassen?",
+  "faq_where_should_leave_luggage_answer": "Athens Bag Storage ist Ihre ideale Wahl für bequeme Gepäckaufbewahrung im Herzen von Athen, nur einen kurzen Spaziergang vom Omonoia-Platz entfernt und in der Nähe der wichtigsten Sehenswürdigkeiten der Stadt!",
+  "faq_what_is_the_cost_question": "Was kostet die Gepäckaufbewahrung in Athen?",
+  "faq_what_is_the_cost_answer": "Die Kosten für die Gepäckaufbewahrung in Athen betragen 5 € pro Tasche und Tag. Wir bieten eine sichere und bequeme Lösung zum Aufbewahren Ihres Gepäcks, während Sie die Stadt erkunden."
 }

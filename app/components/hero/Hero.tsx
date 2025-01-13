@@ -13,8 +13,9 @@ const Hero = async ({ locale }: { locale: SupportedLocaleTypes }) => {
   const translations = await getTranslations();
 
   return (
-    <section className="hero py-10 lg:py-28 w-full h-[100dvh] bg-gradient-to-b from-white/0 to-blue-300 flex justify-center items-center h-sm:items-end relative">
-      <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+    <section className="hero w-full h-[100dvh] bg-gradient-to-b from-white/0 to-blue-300 flex flex-col items-center">
+      <div className="mock-header" />
+      <div className="px-6 lg:px-12 flex justify-between items-center flex-1">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between">
           <div className="lg:w-1/2 flex flex-col items-start gap-6">
             <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold">
@@ -39,10 +40,12 @@ const Hero = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           />
         </div>
       </div>
-      {/* h-sm:hidden */}
+      {/* h-sm:hidden - when height is less than 700px */}
       <div className="absolute bottom-0 left-0 p-5 text-sm flex flex-col gap-2 h-sm:hidden">
         <Link
           href="https://www.google.com/maps/place/37.985727121782325,23.71909543003348"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex flex-row gap-2 justify-start items-center hover:underline"
         >
           <FaLocationDot size={16} />
@@ -50,6 +53,8 @@ const Hero = async ({ locale }: { locale: SupportedLocaleTypes }) => {
         </Link>
         <Link
           href="tel:+302101234567"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex flex-row gap-2 justify-start items-center hover:underline"
         >
           <FaSquarePhoneFlip size={15} />

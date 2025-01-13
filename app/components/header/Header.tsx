@@ -5,6 +5,7 @@ import logo from "@/public/logo.png";
 import { BiMenu } from "react-icons/bi";
 import Link from "next/link";
 import BlurBackground from "./BlurBackground.client";
+import LanguageChanger from "../language_selector/LanguageChanger";
 import _ from "lodash";
 
 //----------------------------------------------------------------------
@@ -15,6 +16,7 @@ const Header = async ({ locale }: { locale: SupportedLocaleTypes }) => {
 
   return (
     <header className="fixed w-full top-0 max-h-[110px] flex justify-center items-center z-10">
+      <LanguageChanger locale={locale} />
       <BlurBackground />
       <div className="flex justify-center items-center gap-3 px-[10px]">
         <Link
@@ -51,8 +53,8 @@ const Header = async ({ locale }: { locale: SupportedLocaleTypes }) => {
         >
           {translations("questions")}
         </Link>
-        <button className="md:hidden fixed top-10 right-5 bg-transparent p-0 m-0 transition-transform transform active:scale-110">
-          <BiMenu size={32} color="#163d44" />
+        <button className="md:hidden fixed top-9 right-5 bg-transparent p-0 m-0 transition-transform transform active:scale-110">
+          <BiMenu size={30} color="#163d44" />
         </button>
       </div>
     </header>

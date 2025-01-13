@@ -1,4 +1,6 @@
 import { NextIntlClientProvider } from "next-intl";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+import { Toaster } from "react-hot-toast";
 import { getMessages } from "next-intl/server";
 import { SupportedLocaleTypes } from "@/locales";
 import type { Metadata } from "next";
@@ -45,7 +47,10 @@ export default async function LocaleLayout({
       </Head>
       <body className={montserrat.className}>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <AppRouterCacheProvider>
+            <Toaster position="top-center" />
+            {children}
+          </AppRouterCacheProvider>
         </NextIntlClientProvider>
       </body>
     </html>

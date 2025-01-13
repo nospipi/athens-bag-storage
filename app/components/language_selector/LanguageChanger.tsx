@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button.client";
-import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
   Drawer,
   DrawerContent,
@@ -10,6 +8,7 @@ import { CiGlobe } from "react-icons/ci";
 import LanguageButton from "./LanguageButton.client";
 import DrawerHeaderClient from "./DrawerHeader.client";
 import { SupportedLocaleTypes } from "@/locales";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 //-------------------------------------------------------------------------
 
@@ -20,17 +19,19 @@ const LanguageChanger = async ({
 }) => {
   setRequestLocale(locale);
   const translations = await getTranslations();
+
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button
-          title={translations("select_language")}
-          variant="outline"
-          size="icon"
-          className="rounded-full fixed bottom-4 right-4"
-        >
-          <CiGlobe />
-        </Button>
+        <div className="rounded-full fixed top-10 left-4 cursor-pointer flex items-center gap-1">
+          <div className="bg-slate-100/30 p-1 rounded-full shadow-lg">
+            <CiGlobe size={24} />
+          </div>
+
+          <span className="text-black text-xs font-semibold">
+            {translations(locale)}
+          </span>
+        </div>
       </DrawerTrigger>
 
       <DrawerPortal>
