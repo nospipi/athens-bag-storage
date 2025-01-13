@@ -10,6 +10,7 @@
   "how_to_find_us": "How to find us",
   "how_to_find_us_explainer": "Our facilities are located at Metaxourgeio area near Omonoia Square, Syntagma Square, and Monastiraki Square, and easily accessible by public transport.",
   "contact_us": "Contact us",
+  "pricing": "Pricing",
   "terms_of_service": "Terms of Service",
   "questions": "FAQ",
   "hero_heading": "Convenient Luggage Storage in Downtown Athens",
@@ -22,5 +23,9 @@
   "faq_where_should_leave_luggage_question": "Where should I leave my luggage in Athens?",
   "faq_where_should_leave_luggage_answer": "Athens Bag Storage is your ideal choice for convenient luggage storage in the heart of Athens, just a short walk from Omonoia Square and close to the city's main attractions!",
   "faq_what_is_the_cost_question": "What is the cost of luggage storage in Athens?",
-  "faq_what_is_the_cost_answer": "The cost of luggage storage in Athens is €5 per bag per day. We offer a secure and convenient solution for storing your luggage while you explore the city."
+  "faq_what_is_the_cost_answer": "The cost of luggage storage in Athens is €5 per bag per day. We offer a secure and convenient solution for storing your luggage while you explore the city.",
+  "faq_how_do_i_pay_question": "How do I pay ?",
+  "faq_how_do_i_pay_answer": "You can pay with cash or card at our facility. We accept all major credit and debit cards.",
+  "faq_what_are_the_terms_of_service_question": "What are the terms of service?",
+  "faq_what_are_the_terms_of_service_answer": "Our terms of service are simple. We provide a safe and secure place for you to store your luggage while you explore the city. We are not responsible for any lost or stolen items. Please make sure to keep your receipt safe."
 }

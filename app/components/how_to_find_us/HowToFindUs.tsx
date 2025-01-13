@@ -1,4 +1,3 @@
-import NavigateButton from "./NavigateButton";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SupportedLocaleTypes } from "@/locales";
 import Map from "./Map.client";
@@ -13,30 +12,34 @@ const HowToFindUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
   return (
     <div
       id={_.kebabCase(translations("how_to_find_us"))}
-      className="h-[100dvh] bg-gradient-to-b from-blue-300 to-pink-300 flex flex-col gap-3 p-4"
+      className="w-full h-[100dvh] bg-gradient-to-b from-blue-300 to-pink-300 flex flex-col"
     >
       <div
         className="mock-header"
         style={{
-          minHeight: "130px",
+          minHeight: "160px",
         }}
       />
-      {/* SEO-optimized and visually appealing explanations */}
-      <div className="text-left flex flex-col gap-3">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">
+
+      <div className="text-left bg-black bg-opacity-30 w-full p-4 flex flex-col gap-4 border-b-2 border-white">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
           {translations("how_to_find_us")}
         </h1>
-        <p className="text-md">{translations("how_to_find_us_explainer")}</p>
+        <p className="text-md text-yellow-200">
+          {translations("how_to_find_us_explainer")}
+        </p>
       </div>
-      <a
-        href={`https://www.google.com/maps/place/37.985727121782325,23.71909543003348`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-blue-500 text-gray-900 font-semibold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105 self-start text-white"
-      >
-        {translations("navigate")}
-      </a>
-      <Map />
+      <div className="flex flex-col gap-4 p-4 flex-1 w-full h-full">
+        <a
+          href={`https://www.google.com/maps/place/37.985727121782325,23.71909543003348`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-blue-500 text-gray-900 font-semibold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105 self-start text-white"
+        >
+          {translations("navigate")}
+        </a>
+        <Map />
+      </div>
     </div>
   );
 };

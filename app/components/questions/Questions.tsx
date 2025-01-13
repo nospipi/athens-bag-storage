@@ -10,33 +10,32 @@ import _ from "lodash";
 
 //-------------------------------------------------------------------------
 
-const QuestionsAccordion = async ({
-  locale,
-}: {
-  locale: SupportedLocaleTypes;
-}) => {
+const Questions = async ({ locale }: { locale: SupportedLocaleTypes }) => {
   setRequestLocale(locale);
   const translations = await getTranslations();
-  //faq_where_should_leave_luggage_question
-  //faq_where_should_leave_luggage_answer
-  //faq_what_is_the_cost_question
-  //faq_what_is_the_cost_answer
+
   return (
     <section
       id={_.kebabCase(translations("questions"))}
-      className="hero w-full h-[100dvh] bg-gradient-to-b from-pink-300 to-blue-300 flex flex-col gap-3 p-4 items-start"
+      className="hero w-full min-h-[100dvh] bg-gradient-to-b from-pink-300 to-blue-300 flex flex-col"
     >
-      <div className="mock-header" />
-      {/* Header Section */}
-      <div className="text-left mt-12 mb-8">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
+      <div
+        className="mock-header"
+        style={{
+          minHeight: "160px",
+        }}
+      />
+
+      <div className="text-left bg-black bg-opacity-30 w-full p-4 flex flex-col gap-4 border-b-2 border-white">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
           {translations("frequently_asked_questions")}
         </h1>
-        <p className="text-lg md:text-xl text-gray-700">
+        <p className="text-md text-yellow-200">
           {translations("find_answers_to_common_questions")}
         </p>
       </div>
-      <Accordion type="single" collapsible className="w-full">
+
+      <Accordion type="single" collapsible className="w-full p-4">
         <AccordionItem value="item-1">
           <AccordionTrigger>
             {translations("faq_where_should_leave_luggage_question")}
@@ -55,9 +54,19 @@ const QuestionsAccordion = async ({
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
-          <AccordionTrigger>Is it animated?</AccordionTrigger>
+          <AccordionTrigger>
+            {translations("faq_how_do_i_pay_question")}
+          </AccordionTrigger>
           <AccordionContent>
-            Yes. It's animated by default, but you can disable it if you prefer.
+            {translations("faq_how_do_i_pay_answer")}
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-4">
+          <AccordionTrigger>
+            {translations("faq_what_are_the_terms_of_service_question")}
+          </AccordionTrigger>
+          <AccordionContent>
+            {translations("faq_what_are_the_terms_of_service_answer")}
           </AccordionContent>
         </AccordionItem>
       </Accordion>
@@ -65,4 +74,4 @@ const QuestionsAccordion = async ({
   );
 };
 
-export default QuestionsAccordion;
+export default Questions;

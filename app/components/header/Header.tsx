@@ -25,11 +25,12 @@ const Header = async ({ locale }: { locale: SupportedLocaleTypes }) => {
         >
           {translations("how_to_find_us")}
         </Link>
+
         <Link
-          href={`#${_.kebabCase(translations("contact_us")).toLowerCase()}`}
+          href={`#${_.kebabCase(translations("pricing")).toLowerCase()}`}
           className="hidden md:block text-sm hover:underline cursor-pointer"
         >
-          {translations("contact_us")}
+          {translations("pricing")}
         </Link>
         <Link href={"/"}>
           <Image
@@ -40,12 +41,10 @@ const Header = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           />
         </Link>
         <Link
-          href={`#${_.kebabCase(
-            translations("terms_of_service")
-          ).toLowerCase()}`}
+          href={`#${_.kebabCase(translations("contact_us")).toLowerCase()}`}
           className="hidden md:block text-sm hover:underline cursor-pointer"
         >
-          {translations("terms_of_service")}
+          {translations("contact_us")}
         </Link>
         <Link
           href={`#${_.kebabCase(translations("questions")).toLowerCase()}`}

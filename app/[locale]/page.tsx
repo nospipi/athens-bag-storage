@@ -1,7 +1,8 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SupportedLocaleTypes } from "@/locales";
 import LanguageChanger from "../components/language_selector/LanguageChanger";
-import QuestionsAccordion from "../components/questions/QuestionsAccordion";
+import Questions from "../components/questions/Questions";
+import ContactUs from "../components/contact_us/ContactUs";
 import Header from "../components/header/Header";
 import Hero from "../components/hero/Hero";
 import HowToFindUs from "../components/how_to_find_us/HowToFindUs";
@@ -26,14 +27,8 @@ export default async function IndexPage({ params }: Props) {
       <Header locale={locale} />
       <Hero locale={locale} />
       <HowToFindUs locale={locale} />
-      <QuestionsAccordion locale={locale} />
-
-      <div
-        id={_.kebabCase(translations("contact_us"))}
-        className="w-full h-[100dvh] bg-gradient-to-b from-blue-300 to-white/0"
-      >
-        CONTACT US
-      </div>
+      <Questions locale={locale} />
+      <ContactUs locale={locale} />
     </div>
   );
 }
