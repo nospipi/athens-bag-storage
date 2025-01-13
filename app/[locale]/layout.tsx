@@ -1,5 +1,7 @@
 import { NextIntlClientProvider } from "next-intl";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
+//import { SpeedInsights } from "@vercel/speed-insights/next"; //only one for every hobby account on vercel
+import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "react-hot-toast";
 import { getMessages } from "next-intl/server";
 import { SupportedLocaleTypes } from "@/locales";
@@ -52,6 +54,8 @@ export default async function LocaleLayout({
             {children}
           </AppRouterCacheProvider>
         </NextIntlClientProvider>
+        {/* <SpeedInsights /> */}
+        <Analytics />
       </body>
     </html>
   );
