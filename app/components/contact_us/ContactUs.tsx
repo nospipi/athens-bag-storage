@@ -32,39 +32,41 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           We would love to hear from you. Get in touch with us today!
         </p>
       </div>
-      <div className="flex flex-row flex-wrap gap-4 p-4">
-        <a
-          href={`https://www.google.com/maps/place/37.985727121782325,23.71909543003348`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-blue-500 text-gray-900 font-semibold py-3 px-5 rounded-full shadow-lg transition transform hover:scale-105 self-start text-white flex flex-row gap-4 items-center"
-        >
-          <BsTelephoneFill size={20} />
-          <span>+30 6941788654</span>
-        </a>
-        <a
-          href={`https://www.google.com/maps/place/37.985727121782325,23.71909543003348`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-blue-500 text-gray-900 font-semibold py-3 px-5 rounded-full shadow-lg transition transform hover:scale-105 self-start text-white flex flex-row gap-4 items-center"
-        >
-          <BsTelephoneFill size={20} />
-          <span>+30 6947845332</span>
-        </a>
-        <a
-          href={`mailto:info@athensbagstorage.com`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-blue-500 text-gray-900 font-semibold py-3 px-5 rounded-full shadow-lg transition transform hover:scale-105 self-start text-white flex flex-row gap-4 items-center"
-        >
-          <MdAlternateEmail size={22} />
-          <span>info@athensbagstorage.com</span>
-        </a>
-      </div>
-      <div className="p-4 flex flex-row flex-1">
-        <Form />
-        <div className="flex items-center justify-center w-[100%] transform scale-x-[-1] hidden md:flex">
-          <Image src={illustrationSVG} alt="Illustration" width={200} />
+      <div className="flex flex-col flex-1 p-4 gap-4">
+        <div className="flex flex-row flex-wrap gap-4">
+          <a
+            href={`https://www.google.com/maps/place/37.985727121782325,23.71909543003348`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-500 text-gray-900 font-semibold py-3 px-5 rounded-full shadow-lg transition transform hover:scale-105 self-start text-white flex flex-row gap-4 items-center"
+          >
+            <BsTelephoneFill size={20} />
+            <span>+30 6941788654</span>
+          </a>
+          <a
+            href={`https://www.google.com/maps/place/37.985727121782325,23.71909543003348`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-500 text-gray-900 font-semibold py-3 px-5 rounded-full shadow-lg transition transform hover:scale-105 self-start text-white flex flex-row gap-4 items-center"
+          >
+            <BsTelephoneFill size={20} />
+            <span>+30 6947845332</span>
+          </a>
+          <a
+            href={`mailto:info@athensbagstorage.com`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-500 text-gray-900 font-semibold py-3 px-5 rounded-full shadow-lg transition transform hover:scale-105 self-start text-white flex flex-row gap-4 items-center"
+          >
+            <MdAlternateEmail size={22} />
+            <span>info@athensbagstorage.com</span>
+          </a>
+        </div>
+        <div className="flex flex-row flex-1">
+          <Form />
+          <div className="flex items-center justify-center w-[100%] transform scale-x-[-1] hidden md:flex">
+            <Image src={illustrationSVG} alt="Illustration" width={200} />
+          </div>
         </div>
       </div>
     </section>
