@@ -35,7 +35,10 @@ const Form = () => {
   return (
     <form
       action={action}
-      className="bg-slate-100/30 p-4 rounded-lg flex flex-col shadow-lg h-full w-full"
+      className="bg-slate-100/30 p-4 flex flex-col shadow-lg h-full w-full"
+      style={{
+        borderRadius: "20px",
+      }}
     >
       <h1>Contact Us</h1>
       <TextField
@@ -78,7 +81,7 @@ const Form = () => {
         }}
       />
       <button className="bg-yellow-500 font-semibold py-3 px-5 rounded-full shadow-lg transition transform hover:scale-105 self-start flex flex-row gap-4 items-center mt-3">
-        Submit Form
+        Submit Message
       </button>
     </form>
   );

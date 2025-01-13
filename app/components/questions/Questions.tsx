@@ -6,6 +6,8 @@ import {
 } from "@/components/ui/accordion.client";
 import { SupportedLocaleTypes } from "@/locales";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Image from "next/image";
+import illustrationSVG from "@/public/illustration3.svg";
 import _ from "lodash";
 
 //-------------------------------------------------------------------------
@@ -34,42 +36,47 @@ const Questions = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           {translations("find_answers_to_common_questions")}
         </p>
       </div>
+      <div className="flex flex-row flex-1">
+        <Accordion type="single" collapsible className="w-full p-4">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>
+              {translations("faq_where_should_leave_luggage_question")}
+            </AccordionTrigger>
+            <AccordionContent>
+              {translations("faq_where_should_leave_luggage_answer")}
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>
+              {" "}
+              {translations("faq_what_is_the_cost_question")}
+            </AccordionTrigger>
+            <AccordionContent>
+              {translations("faq_what_is_the_cost_answer")}
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3">
+            <AccordionTrigger>
+              {translations("faq_how_do_i_pay_question")}
+            </AccordionTrigger>
+            <AccordionContent>
+              {translations("faq_how_do_i_pay_answer")}
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger>
+              {translations("faq_what_are_the_terms_of_service_question")}
+            </AccordionTrigger>
+            <AccordionContent>
+              {translations("faq_what_are_the_terms_of_service_answer")}
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
 
-      <Accordion type="single" collapsible className="w-full p-4">
-        <AccordionItem value="item-1">
-          <AccordionTrigger>
-            {translations("faq_where_should_leave_luggage_question")}
-          </AccordionTrigger>
-          <AccordionContent>
-            {translations("faq_where_should_leave_luggage_answer")}
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-2">
-          <AccordionTrigger>
-            {" "}
-            {translations("faq_what_is_the_cost_question")}
-          </AccordionTrigger>
-          <AccordionContent>
-            {translations("faq_what_is_the_cost_answer")}
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-3">
-          <AccordionTrigger>
-            {translations("faq_how_do_i_pay_question")}
-          </AccordionTrigger>
-          <AccordionContent>
-            {translations("faq_how_do_i_pay_answer")}
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-4">
-          <AccordionTrigger>
-            {translations("faq_what_are_the_terms_of_service_question")}
-          </AccordionTrigger>
-          <AccordionContent>
-            {translations("faq_what_are_the_terms_of_service_answer")}
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
+        <div className="flex items-center justify-center w-[100%] hidden md:flex">
+          <Image src={illustrationSVG} alt="Illustration" width={200} />
+        </div>
+      </div>
     </section>
   );
 };

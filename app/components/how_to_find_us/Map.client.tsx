@@ -179,6 +179,7 @@ const Map = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-end",
+        width: "100%",
       }}
     >
       <MapClientMarker
@@ -191,7 +192,7 @@ const Map = () => {
         ref={mapContainer}
         style={{
           flex: 1,
-          borderRadius: "10px",
+          borderRadius: "20px",
           border: "2px solid #ffffff",
           boxShadow: "0 0 5px rgba(0, 0, 0, 0.5)",
         }}

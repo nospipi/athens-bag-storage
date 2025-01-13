@@ -63,10 +63,10 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           </a>
         </div>
         <div className="flex flex-row flex-1">
-          <Form />
-          <div className="flex items-center justify-center w-[100%] transform scale-x-[-1] hidden md:flex">
+          <div className="flex items-center justify-center w-[100%] hidden md:flex">
             <Image src={illustrationSVG} alt="Illustration" width={200} />
           </div>
+          <Form />
         </div>
       </div>
     </section>
