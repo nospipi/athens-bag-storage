@@ -42,7 +42,7 @@ const HowToFindUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
         </a>
         <div className="flex flex-row flex-1">
           <div className="flex items-center justify-center flex-1 hidden md:flex">
-            <Image src={illustrationSVG} alt="Illustration" width={250} />
+            <Image src={illustrationSVG} alt="Illustration" width={300} />
           </div>
           <Map />
         </div>

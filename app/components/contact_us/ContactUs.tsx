@@ -64,7 +64,7 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
         </div>
         <div className="flex flex-row flex-1">
           <div className="flex items-center justify-center w-[100%] hidden md:flex">
-            <Image src={illustrationSVG} alt="Illustration" width={200} />
+            <Image src={illustrationSVG} alt="Illustration" width={250} />
           </div>
           <Form />
         </div>
