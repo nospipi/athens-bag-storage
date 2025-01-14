@@ -15,10 +15,10 @@ const Hero = async ({ locale }: { locale: SupportedLocaleTypes }) => {
   return (
     <section className="hero w-full h-[100dvh] bg-gradient-to-b from-white/0 to-blue-300 flex flex-col items-center">
       <div className="mock-header w-full min-h-[140px] sm:min-h-[160px]" />
-      <div className="px-6 lg:px-12 flex justify-between items-center flex-1">
-        <div className="flex flex-col-reverse md:flex-row items-center justify-between">
+      <div className="px-6 lg:px-12 flex flex-col justify-center flex-1 gap-6 pb-[20px]">
+        <div className="flex flex-1 flex-col-reverse md:flex-row items-center justify-between">
           <div className="lg:w-1/2 flex flex-col items-start gap-6">
-            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold">
+            <h1 className="text-[20px] sm:text-3xl lg:text-5xl font-bold">
               {translations("hero_heading")}
             </h1>
             <p className="text-sm md:text-xl text-left">
@@ -36,30 +36,29 @@ const Hero = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           <Image
             src={illustration1Svg}
             alt="Illustration"
-            className="w-[250px] md:w-[300px] h-sm:w-[200px]"
+            className="w-[250px] md:w-[300px] h-sm:w-[185px]"
           />
         </div>
-      </div>
-      {/* h-sm:hidden - when height is less than 700px */}
-      <div className="absolute bottom-0 left-0 p-5 text-sm flex flex-col gap-2 h-sm:hidden">
-        <Link
-          href="https://www.google.com/maps/place/37.985727121782325,23.71909543003348"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-row gap-2 justify-start items-center hover:underline"
-        >
-          <FaLocationDot size={16} />
-          <span>{translations("hero_address")}</span>
-        </Link>
-        <Link
-          href="tel:+302101234567"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-row gap-2 justify-start items-center hover:underline"
-        >
-          <FaSquarePhoneFlip size={15} />
-          <span>+30 210 1234567</span>
-        </Link>
+        <div className="text-sm flex flex-col gap-2">
+          <Link
+            href="https://www.google.com/maps/place/37.985727121782325,23.71909543003348"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-row gap-2 justify-start items-center hover:underline"
+          >
+            <FaLocationDot size={16} />
+            <span>{translations("hero_address")}</span>
+          </Link>
+          <Link
+            href="tel:+302101234567"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-row gap-2 justify-start items-center hover:underline"
+          >
+            <FaSquarePhoneFlip size={15} />
+            <span>+30 210 1234567</span>
+          </Link>
+        </div>
       </div>
     </section>
   );
