@@ -70,8 +70,16 @@ const Questions = async ({ locale }: { locale: SupportedLocaleTypes }) => {
             <AccordionTrigger>
               {translations("faq_what_are_the_terms_of_service_question")}
             </AccordionTrigger>
-            <AccordionContent>
-              {translations("faq_what_are_the_terms_of_service_answer")}
+            <AccordionContent className="flex flex-col gap-1">
+              <span>• {translations("terms_of_service_1")}</span>
+              <span>• {translations("terms_of_service_2")}</span>
+              <span>• {translations("terms_of_service_3")}</span>
+              <span>• {translations("terms_of_service_4")}</span>
+              <span>• {translations("terms_of_service_5")}</span>
+              <span>• {translations("terms_of_service_6")}</span>
+              <span>• {translations("terms_of_service_7")}</span>
+              <span>• {translations("terms_of_service_8")}</span>
+              <span>• {translations("terms_of_service_9")}</span>
             </AccordionContent>
           </AccordionItem>
         </Accordion>

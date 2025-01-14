@@ -2,7 +2,7 @@
 
 import { useTransition } from "react";
 import { useParams } from "next/navigation";
-import { Button } from "@/components/ui/button.client";
+import { Button } from "@/components/ui/button";
 import { CircleFlagLanguage } from "react-circle-flags";
 import { Locale, usePathname, useRouter } from "@/app/i18n/routing";
 import { useTranslations, useLocale } from "next-intl";
