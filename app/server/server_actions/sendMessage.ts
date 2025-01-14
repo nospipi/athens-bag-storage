@@ -11,8 +11,7 @@ export interface IActionState {
 
 const sendMessage = async (
   previousState: IActionState,
-  formData: FormData,
-  request: NextRequest
+  formData: FormData
 ): Promise<IActionState> => {
   const cookieStore = await cookies();
   const locale = cookieStore.get("NEXT_LOCALE")?.value ?? "en";

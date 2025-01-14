@@ -1,9 +1,3 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion.client";
 import { SupportedLocaleTypes } from "@/locales";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";

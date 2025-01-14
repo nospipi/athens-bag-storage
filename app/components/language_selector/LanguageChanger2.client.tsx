@@ -53,7 +53,7 @@ const LanguageChanger = ({ locale }: { locale: SupportedLocaleTypes }) => {
         <div className="flex items-center gap-1">
           <div className="bg-slate-100/30 p-1 rounded-full shadow-lg">
             <motion.div
-              animate={{ rotate: isOpen ? 90 : 0 }}
+              animate={{ rotate: isOpen ? -90 : 0 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
             >
               <CiGlobe size={24} color="#555555" />
@@ -65,7 +65,6 @@ const LanguageChanger = ({ locale }: { locale: SupportedLocaleTypes }) => {
           <RxCaretDown size={18} />
         </div>
 
-        {/* Language List */}
         <motion.div
           initial={{ height: 0, opacity: 0 }}
           animate={{
