@@ -30,7 +30,7 @@ const LanguageChanger = ({ locale }: { locale: SupportedLocaleTypes }) => {
     >
       <motion.div
         onClick={handleToggle}
-        className={`fixed top-7 left-3 cursor-pointer flex flex-col items-center p-2 rounded-[25px] select-none gap-2`}
+        className={`fixed top-8 left-3 cursor-pointer flex flex-col items-center p-2 rounded-[20px] select-none gap-2`}
         initial={{
           backgroundColor: "transparent",
           boxShadow: "none",
@@ -47,17 +47,18 @@ const LanguageChanger = ({ locale }: { locale: SupportedLocaleTypes }) => {
           backdropFilter: "none",
         }}
         transition={{
-          duration: 0.2, // This is for the animate state
+          duration: 0.2,
         }}
       >
         <div className="flex items-center gap-1">
-          <motion.div
-            className="bg-slate-100/30 p-1 rounded-full shadow-lg"
-            animate={{ rotate: isOpen ? 90 : 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-          >
-            <CiGlobe size={24} color="#555555" />
-          </motion.div>
+          <div className="bg-slate-100/30 p-1 rounded-full shadow-lg">
+            <motion.div
+              animate={{ rotate: isOpen ? 90 : 0 }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+            >
+              <CiGlobe size={24} color="#555555" />
+            </motion.div>
+          </div>
           <span className="text-xs font-semibold">
             {translations(currentLocale)}
           </span>

@@ -26,14 +26,6 @@ body {
   background-size: 20px 20px;
 }
 
-.mock-header {
-  width: 100%;
-  min-height: 110px;
-  /* This div is to account for header space in each section (for proper sectioning), 
-because sections have 100dvh height, we need something to take the place of header,
-in order to have a consistent layout, in all screen sizes */
-}
-
 /* .mapboxgl-popup-tip {
   Hide the popup arrow
   display: none !important;

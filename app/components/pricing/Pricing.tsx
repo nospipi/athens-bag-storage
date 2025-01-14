@@ -31,12 +31,7 @@ const Pricing = async ({ locale }: { locale: SupportedLocaleTypes }) => {
       id={_.kebabCase(translations("pricing"))}
       className="hero w-full min-h-[100dvh] bg-gradient-to-b from-pink-300 to-blue-300 flex flex-col"
     >
-      <div
-        className="mock-header"
-        style={{
-          minHeight: "160px",
-        }}
-      />
+      <div className="mock-header w-full min-h-[140px] sm:min-h-[160px]" />
 
       <div className="text-left bg-black bg-opacity-30 w-full p-4 flex flex-col gap-4 border-b-2 border-white">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
@@ -48,111 +43,160 @@ const Pricing = async ({ locale }: { locale: SupportedLocaleTypes }) => {
       </div>
       <div className="flex flex-row flex-1 p-4">
         <Table className="flex-1">
-          <TableCaption>Currency is Euro</TableCaption>
+          <TableCaption>{translations("currency_is_euro")}</TableCaption>
           <TableHeader>
             <TableRow>
-              <TableHead rowSpan={2}>Storage Time</TableHead>
-              <TableHead colSpan={3} className="text-center">
-                Sizes
+              <TableHead rowSpan={2} className="text-white">
+                {translations("storage_time")}
+              </TableHead>
+              <TableHead colSpan={3} className="text-center text-white">
+                {translations("sizes")}
               </TableHead>
             </TableRow>
             <TableRow>
-              <TableHead>Small</TableHead>
-              <TableHead>Medium</TableHead>
-              <TableHead>Large</TableHead>
+              <TableHead className="text-white">
+                {translations("small")}*
+              </TableHead>
+              <TableHead className="text-white">
+                {translations("medium")}*
+              </TableHead>
+              <TableHead className="text-white">
+                {translations("large")}*
+              </TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             <TableRow>
-              <TableCell>6 hrs</TableCell>
+              <TableCell>6 {translations("hours")}</TableCell>
               <TableCell>€7</TableCell>
               <TableCell>€9</TableCell>
               <TableCell>€11</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>12 hrs</TableCell>
+              <TableCell>12 {translations("hours")}</TableCell>
               <TableCell>€9</TableCell>
               <TableCell>€11</TableCell>
               <TableCell>€13</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>24 hrs</TableCell>
+              <TableCell>24 {translations("hours")}</TableCell>
               <TableCell>€11</TableCell>
               <TableCell>€14</TableCell>
               <TableCell>€17</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>2 days</TableCell>
+              <TableCell>2 {translations("days")}</TableCell>
               <TableCell>€14</TableCell>
               <TableCell>€18</TableCell>
               <TableCell>€22</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>3 days</TableCell>
+              <TableCell>3 {translations("days")}</TableCell>
               <TableCell>€17</TableCell>
               <TableCell>€22</TableCell>
               <TableCell>€27</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>4 days</TableCell>
+              <TableCell>4 {translations("days")}</TableCell>
               <TableCell>€20</TableCell>
               <TableCell>€26</TableCell>
               <TableCell>€32</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>5 days</TableCell>
+              <TableCell>5 {translations("days")}</TableCell>
               <TableCell>€23</TableCell>
               <TableCell>€30</TableCell>
               <TableCell>€37</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>6 days</TableCell>
+              <TableCell>6 {translations("days")}</TableCell>
               <TableCell>€26</TableCell>
               <TableCell>€34</TableCell>
               <TableCell>€42</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>7 days</TableCell>
+              <TableCell>7 {translations("days")}</TableCell>
               <TableCell>€29</TableCell>
               <TableCell>€38</TableCell>
               <TableCell>€47</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>8 days</TableCell>
+              <TableCell>8 {translations("days")}</TableCell>
               <TableCell>€32</TableCell>
               <TableCell>€42</TableCell>
               <TableCell>€52</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>9 days</TableCell>
+              <TableCell>9 {translations("days")}</TableCell>
               <TableCell>€35</TableCell>
               <TableCell>€46</TableCell>
               <TableCell>€57</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>10 days</TableCell>
+              <TableCell>10 {translations("days")}</TableCell>
               <TableCell>€38</TableCell>
               <TableCell>€50</TableCell>
               <TableCell>€62</TableCell>
             </TableRow>
           </TableBody>
-          <TableFooter>
+          <TableFooter className="bg-transparent">
             <TableRow>
-              <TableCell colSpan={4} className="text-center">
-                Dimensions
+              <TableCell colSpan={4} className="text-center text-white">
+                {translations("dimensions_in_cm")}
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Small</TableCell>
-              <TableCell colSpan={3}>Up to 50cm x 30cm x 20cm</TableCell>
+              <TableCell className="text-white">
+                {translations("small")}
+              </TableCell>
+              <TableCell colSpan={3}>
+                {translations("up_to")} 50cm x 30cm x 20cm
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Medium</TableCell>
-              <TableCell colSpan={3}>Up to 65cm x 50cm x 25cm</TableCell>
+              <TableCell className="text-white">
+                {translations("medium")}
+              </TableCell>
+              <TableCell colSpan={3}>
+                {translations("up_to")} 65cm x 50cm x 25cm
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Large</TableCell>
-              <TableCell colSpan={3}>Up to 90cm x 40cm x 40cm</TableCell>
+              <TableCell className="text-white">
+                {translations("large")}
+              </TableCell>
+              <TableCell colSpan={3}>
+                {translations("up_to")} to 90cm x 40cm x 40cm
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell colSpan={4} className="text-center text-white">
+                {translations("dimensions_in_inches")}
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell className="text-white">
+                {translations("small")}
+              </TableCell>
+              <TableCell colSpan={3}>
+                {translations("up_to")} 19.69 in x 11.81 in x 7.87 in
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell className="text-white">
+                {translations("medium")}
+              </TableCell>
+              <TableCell colSpan={3}>
+                {translations("up_to")} 25.59 in x 19.69 in x 9.84 in
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell className="text-white">
+                {translations("large")}
+              </TableCell>
+              <TableCell colSpan={3}>
+                {translations("up_to")} 35.43 in x 15.75 in x 15.75 in
+              </TableCell>
             </TableRow>
           </TableFooter>
         </Table>

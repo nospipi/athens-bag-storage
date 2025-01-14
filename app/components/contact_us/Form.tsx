@@ -1,36 +1,37 @@
 "use client";
 
 import { useActionState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import sendMessage, {
   IActionState,
 } from "@/app/server/server_actions/sendMessage";
 import TextField from "@mui/material/TextField";
-import toast from "react-hot-toast";
+import { useToast } from "@/hooks/use-toast";
+import { RotatingLines } from "react-loader-spinner";
 
 //---------------------------------------------------------
 
 const Form = () => {
+  const { toast } = useToast();
+  const translations = useTranslations();
   const [state, action, isPending] = useActionState(sendMessage, {
     success: null,
     error: null,
   } as IActionState);
 
   useEffect(() => {
-    toast.dismiss();
-
-    if (isPending) {
-      toast.dismiss();
-      toast.loading("Sending message...");
-    }
     if (state.success) {
-      toast.dismiss();
-      toast.success(state.success);
+      toast({
+        title: state.success,
+      });
     }
     if (state.error) {
-      toast.dismiss();
-      toast.error(state.error);
+      toast({
+        variant: "destructive",
+        title: state.error,
+      });
     }
-  }, [state.success, state.error, isPending]);
+  }, [state.success, state.error]);
 
   return (
     <form
@@ -40,10 +41,10 @@ const Form = () => {
         borderRadius: "20px",
       }}
     >
-      <h1>Contact Us</h1>
+      <h1>{translations("send_us_a_message")}</h1>
       <TextField
         name="name"
-        label="Name"
+        label={translations("name")}
         variant="filled"
         fullWidth
         margin="dense"
@@ -52,7 +53,7 @@ const Form = () => {
       <TextField
         name="email"
         type="email"
-        label="Email"
+        label={translations("email")}
         variant="filled"
         fullWidth
         margin="dense"
@@ -60,7 +61,7 @@ const Form = () => {
       />
       <TextField
         name="message"
-        label="Your Message"
+        label={translations("your_message")}
         multiline
         variant="filled"
         fullWidth
@@ -80,9 +81,16 @@ const Form = () => {
           flex: 1,
         }}
       />
-      <button className="bg-yellow-500 font-semibold py-3 px-5 rounded-full shadow-lg transition transform hover:scale-105 self-start flex flex-row gap-4 items-center mt-3">
-        Submit Message
-      </button>
+      <div className="flex flex-row items-center justify-between mt-3">
+        <button
+          className="bg-yellow-500 font-semibold py-3 px-5 rounded-full shadow-lg transition transform hover:scale-105 self-start flex flex-row gap-4 items-center disabled:bg-gray-400 disabled:cursor-not-allowed disabled:opacity-50"
+          type="submit"
+          disabled={isPending}
+        >
+          {translations("submit_message")}
+        </button>
+        {isPending && <RotatingLines width="16" strokeColor="black" />}
+      </div>
     </form>
   );
 };

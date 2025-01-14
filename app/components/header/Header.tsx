@@ -37,7 +37,7 @@ const Header = async ({ locale }: { locale: SupportedLocaleTypes }) => {
             src={logo}
             alt="Logo"
             width={135}
-            className="cursor-pointer mt-[60px] drop-shadow-[0px_10px_13px_rgba(0,0,0,0.35)] w-[100px] sm:w-[135px]"
+            className="cursor-pointer mt-[40px] sm:mt-[60px] drop-shadow-[0px_10px_13px_rgba(0,0,0,0.35)] w-[100px] sm:w-[135px]"
           />
         </Link>
         <Link

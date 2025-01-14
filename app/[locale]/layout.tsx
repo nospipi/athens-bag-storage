@@ -2,7 +2,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 //import { SpeedInsights } from "@vercel/speed-insights/next"; //only one for every hobby account on vercel
 import { Analytics } from "@vercel/analytics/next";
-import { Toaster } from "react-hot-toast";
+import { Toaster } from "@/components/ui/toaster";
 import { getMessages } from "next-intl/server";
 import { SupportedLocaleTypes } from "@/locales";
 import type { Metadata } from "next";
@@ -50,7 +50,7 @@ export default async function LocaleLayout({
       <body className={montserrat.className}>
         <NextIntlClientProvider messages={messages}>
           <AppRouterCacheProvider>
-            <Toaster position="top-center" />
+            <Toaster />
             {children}
           </AppRouterCacheProvider>
         </NextIntlClientProvider>

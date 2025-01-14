@@ -16,12 +16,7 @@ const HowToFindUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
       id={_.kebabCase(translations("how_to_find_us"))}
       className="w-full h-[100dvh] bg-gradient-to-b from-blue-300 to-pink-300 flex flex-col"
     >
-      <div
-        className="mock-header"
-        style={{
-          minHeight: "160px",
-        }}
-      />
+      <div className="mock-header w-full min-h-[140px] sm:min-h-[160px]" />
 
       <div className="text-left bg-black bg-opacity-30 w-full p-4 flex flex-col gap-4 border-b-2 border-white">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">

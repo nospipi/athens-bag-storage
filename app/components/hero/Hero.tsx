@@ -14,7 +14,7 @@ const Hero = async ({ locale }: { locale: SupportedLocaleTypes }) => {
 
   return (
     <section className="hero w-full h-[100dvh] bg-gradient-to-b from-white/0 to-blue-300 flex flex-col items-center">
-      <div className="mock-header" />
+      <div className="mock-header w-full min-h-[140px] sm:min-h-[160px]" />
       <div className="px-6 lg:px-12 flex justify-between items-center flex-1">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between">
           <div className="lg:w-1/2 flex flex-col items-start gap-6">
