@@ -5,6 +5,7 @@ import {
   DrawerPortal,
 } from "@/components/ui/drawer.client";
 import { CiGlobe } from "react-icons/ci";
+import { RxCaretDown } from "react-icons/rx";
 import LanguageButton from "./LanguageButton.client";
 import DrawerHeaderClient from "./DrawerHeader.client";
 import { SupportedLocaleTypes } from "@/locales";
@@ -31,6 +32,7 @@ const LanguageChanger = async ({
           <span className="text-black text-xs font-semibold">
             {translations(locale)}
           </span>
+          <RxCaretDown size={18} />
         </div>
       </DrawerTrigger>
 

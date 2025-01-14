@@ -16,7 +16,7 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
   return (
     <section
       id={_.kebabCase(translations("contact_us"))}
-      className="w-full h-[100dvh] bg-gradient-to-b from-blue-300 to-white/0 flex flex-col"
+      className="w-full h-[100dvh] bg-gradient-to-b from-pink-300 to-white/0 flex flex-col"
     >
       <div
         className="mock-header"
@@ -29,7 +29,7 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           {translations("contact_us")}
         </h1>
         <p className="text-md text-yellow-200">
-          We would love to hear from you. Get in touch with us today!
+          {translations("contact_us_explainer")}
         </p>
       </div>
       <div className="flex flex-col flex-1 p-4 gap-4">
@@ -63,10 +63,10 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           </a>
         </div>
         <div className="flex flex-row flex-1">
-          <div className="flex items-center justify-center w-[100%] hidden md:flex">
+          <Form />
+          <div className="flex items-center justify-center w-[100%] hidden md:flex transform scale-x-[-1]">
             <Image src={illustrationSVG} alt="Illustration" width={250} />
           </div>
-          <Form />
         </div>
       </div>
     </section>

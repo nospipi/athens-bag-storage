@@ -4,6 +4,7 @@ import ContactUs from "../components/contact_us/ContactUs";
 import Header from "../components/header/Header";
 import Hero from "../components/hero/Hero";
 import HowToFindUs from "../components/how_to_find_us/HowToFindUs";
+import Pricing from "../components/pricing/Pricing";
 
 import _ from "lodash";
 
@@ -21,6 +22,7 @@ export default async function IndexPage({ params }: Props) {
       <Header locale={locale} />
       <Hero locale={locale} />
       <HowToFindUs locale={locale} />
+      <Pricing locale={locale} />
       <Questions locale={locale} />
       <ContactUs locale={locale} />
     </div>

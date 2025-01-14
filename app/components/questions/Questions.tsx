@@ -19,7 +19,7 @@ const Questions = async ({ locale }: { locale: SupportedLocaleTypes }) => {
   return (
     <section
       id={_.kebabCase(translations("questions"))}
-      className="hero w-full min-h-[100dvh] bg-gradient-to-b from-pink-300 to-blue-300 flex flex-col"
+      className="hero w-full min-h-[100dvh] bg-gradient-to-b from-blue-300 to-pink-300 flex flex-col"
     >
       <div
         className="mock-header"
@@ -37,6 +37,9 @@ const Questions = async ({ locale }: { locale: SupportedLocaleTypes }) => {
         </p>
       </div>
       <div className="flex flex-row flex-1">
+        <div className="flex items-center justify-center w-[100%] hidden md:flex">
+          <Image src={illustrationSVG} alt="Illustration" width={250} />
+        </div>
         <Accordion type="single" collapsible className="w-full p-4">
           <AccordionItem value="item-1">
             <AccordionTrigger>
@@ -72,10 +75,6 @@ const Questions = async ({ locale }: { locale: SupportedLocaleTypes }) => {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-
-        <div className="flex items-center justify-center w-[100%] hidden md:flex">
-          <Image src={illustrationSVG} alt="Illustration" width={250} />
-        </div>
       </div>
     </section>
   );

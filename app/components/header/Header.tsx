@@ -41,16 +41,16 @@ const Header = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           />
         </Link>
         <Link
-          href={`#${_.kebabCase(translations("contact_us")).toLowerCase()}`}
-          className="hidden md:block text-sm hover:underline cursor-pointer"
-        >
-          {translations("contact_us")}
-        </Link>
-        <Link
           href={`#${_.kebabCase(translations("questions")).toLowerCase()}`}
           className="hidden md:block text-sm hover:underline cursor-pointer"
         >
           {translations("questions")}
+        </Link>
+        <Link
+          href={`#${_.kebabCase(translations("contact_us")).toLowerCase()}`}
+          className="hidden md:block text-sm hover:underline cursor-pointer"
+        >
+          {translations("contact_us")}
         </Link>
         <button className="md:hidden fixed top-9 right-5 bg-transparent p-0 m-0 transition-transform transform active:scale-110">
           <BiMenu size={30} color="#163d44" />
