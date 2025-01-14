@@ -16,6 +16,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
+  TableFooter,
 } from "@/components/ui/table";
 import _ from "lodash";
 
@@ -47,6 +48,7 @@ const Pricing = async ({ locale }: { locale: SupportedLocaleTypes }) => {
       </div>
       <div className="flex flex-row flex-1 p-4">
         <Table className="flex-1">
+          <TableCaption>Currency is Euro</TableCaption>
           <TableHeader>
             <TableRow>
               <TableHead rowSpan={2}>Storage Time</TableHead>
@@ -134,6 +136,25 @@ const Pricing = async ({ locale }: { locale: SupportedLocaleTypes }) => {
               <TableCell>€62</TableCell>
             </TableRow>
           </TableBody>
+          <TableFooter>
+            <TableRow>
+              <TableCell colSpan={4} className="text-center">
+                Dimensions
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Small</TableCell>
+              <TableCell colSpan={3}>Up to 50cm x 30cm x 20cm</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Medium</TableCell>
+              <TableCell colSpan={3}>Up to 65cm x 50cm x 25cm</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Large</TableCell>
+              <TableCell colSpan={3}>Up to 90cm x 40cm x 40cm</TableCell>
+            </TableRow>
+          </TableFooter>
         </Table>
 
         <div className="flex items-center justify-center w-[100%] hidden md:flex">

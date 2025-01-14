@@ -5,7 +5,7 @@ import logo from "@/public/logo.png";
 import { BiMenu } from "react-icons/bi";
 import Link from "next/link";
 import BlurBackground from "./BlurBackground.client";
-import LanguageChanger from "../language_selector/LanguageChanger";
+import LanguageChanger from "../language_selector/LanguageChanger2.client";
 import _ from "lodash";
 
 //----------------------------------------------------------------------
@@ -37,7 +37,7 @@ const Header = async ({ locale }: { locale: SupportedLocaleTypes }) => {
             src={logo}
             alt="Logo"
             width={135}
-            className="cursor-pointer mt-[60px] drop-shadow-[0px_10px_13px_rgba(0,0,0,0.35)]"
+            className="cursor-pointer mt-[60px] drop-shadow-[0px_10px_13px_rgba(0,0,0,0.35)] w-[100px] sm:w-[135px]"
           />
         </Link>
         <Link
@@ -52,7 +52,7 @@ const Header = async ({ locale }: { locale: SupportedLocaleTypes }) => {
         >
           {translations("contact_us")}
         </Link>
-        <button className="md:hidden fixed top-9 right-5 bg-transparent p-0 m-0 transition-transform transform active:scale-110">
+        <button className="md:hidden fixed top-10 right-5 bg-transparent p-0 m-0 transition-transform transform active:scale-110">
           <BiMenu size={30} color="#163d44" />
         </button>
       </div>

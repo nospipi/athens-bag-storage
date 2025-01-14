@@ -2,7 +2,6 @@
 
 import { useTransition } from "react";
 import { useParams } from "next/navigation";
-import { Button } from "@/components/ui/button";
 import { CircleFlagLanguage } from "react-circle-flags";
 import { Locale, usePathname, useRouter } from "@/app/i18n/routing";
 import { useTranslations, useLocale } from "next-intl";
@@ -37,14 +36,13 @@ export default function LanguageButton({
   }
 
   return (
-    <Button
-      variant={"outline"}
+    <button
+      className="flex items-center justify-between gap-1 text-xs px-3 py-2 rounded-full bg-transparent hover:bg-white disabled:opacity-50"
       onClick={() => handleChange(locale)}
       disabled={isPending || locale === currentLocale}
     >
       {translations(locale)}
-      {/* <CircleFlag countryCode={icon} height={20} width={20} /> */}
-      <CircleFlagLanguage languageCode={icon} height={20} width={20} />
-    </Button>
+      <CircleFlagLanguage languageCode={icon} height={15} width={15} />
+    </button>
   );
 }
