@@ -180,6 +180,7 @@ const Map = () => {
         flexDirection: "column",
         justifyContent: "flex-end",
         width: "100%",
+        height: "100%",
       }}
     >
       <MapClientMarker
@@ -190,7 +191,7 @@ const Map = () => {
       />
       <div
         ref={mapContainer}
-        className="flex-1 rounded-[30px] shadow-[-5px_5px_15px_rgba(0,0,0,0.3)] h-full border-2 border-[dodgerblue]"
+        className="flex-1 shadow-[-5px_5px_15px_rgba(0,0,0,0.3)] h-full rounded-br-[25px] rounded-3xl"
       />
     </div>
   );
