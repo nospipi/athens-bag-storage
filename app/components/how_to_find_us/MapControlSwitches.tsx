@@ -1,7 +1,7 @@
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
-import toast from "react-hot-toast";
+//import toast from "react-hot-toast";
 
 //---------------------------------------------------------
 
@@ -71,7 +71,7 @@ const MapControlSwitches = ({
                       ]);
                     },
                     (err) => {
-                      toast.error(`${err.message}`);
+                      //toast.error(`${err.message}`);
                       setWatchId(null);
                       setShouldWatchDevicePosition(false);
                     },
@@ -119,7 +119,7 @@ const MapControlSwitches = ({
                       ]);
                     },
                     (err) => {
-                      toast.error(`${err.message}`);
+                      //toast.error(`${err.message}`);
                       setWatchId(null);
                       setShouldWatchDevicePosition(false);
                     },
