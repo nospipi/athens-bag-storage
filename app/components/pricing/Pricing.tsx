@@ -42,28 +42,100 @@ const Pricing = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           {translations("pricing")}
         </h1>
         <p className="text-md text-yellow-200">
-          {translations("find_answers_to_common_questions")}
+          {translations("pricing_explainer")}
         </p>
       </div>
       <div className="flex flex-row flex-1 p-4">
-        <Table>
+        <Table className="flex-1">
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[100px]">Up To</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead>Method</TableHead>
-              <TableHead className="text-right">Amount</TableHead>
+              <TableHead rowSpan={2}>Storage Time</TableHead>
+              <TableHead colSpan={3} className="text-center">
+                Sizes
+              </TableHead>
+            </TableRow>
+            <TableRow>
+              <TableHead>Small</TableHead>
+              <TableHead>Medium</TableHead>
+              <TableHead>Large</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             <TableRow>
-              <TableCell className="font-medium">6 hrs</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
+              <TableCell>6 hrs</TableCell>
+              <TableCell>€7</TableCell>
+              <TableCell>€9</TableCell>
+              <TableCell>€11</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>12 hrs</TableCell>
+              <TableCell>€9</TableCell>
+              <TableCell>€11</TableCell>
+              <TableCell>€13</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>24 hrs</TableCell>
+              <TableCell>€11</TableCell>
+              <TableCell>€14</TableCell>
+              <TableCell>€17</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>2 days</TableCell>
+              <TableCell>€14</TableCell>
+              <TableCell>€18</TableCell>
+              <TableCell>€22</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>3 days</TableCell>
+              <TableCell>€17</TableCell>
+              <TableCell>€22</TableCell>
+              <TableCell>€27</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>4 days</TableCell>
+              <TableCell>€20</TableCell>
+              <TableCell>€26</TableCell>
+              <TableCell>€32</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>5 days</TableCell>
+              <TableCell>€23</TableCell>
+              <TableCell>€30</TableCell>
+              <TableCell>€37</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>6 days</TableCell>
+              <TableCell>€26</TableCell>
+              <TableCell>€34</TableCell>
+              <TableCell>€42</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>7 days</TableCell>
+              <TableCell>€29</TableCell>
+              <TableCell>€38</TableCell>
+              <TableCell>€47</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>8 days</TableCell>
+              <TableCell>€32</TableCell>
+              <TableCell>€42</TableCell>
+              <TableCell>€52</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>9 days</TableCell>
+              <TableCell>€35</TableCell>
+              <TableCell>€46</TableCell>
+              <TableCell>€57</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>10 days</TableCell>
+              <TableCell>€38</TableCell>
+              <TableCell>€50</TableCell>
+              <TableCell>€62</TableCell>
             </TableRow>
           </TableBody>
         </Table>
+
         <div className="flex items-center justify-center w-[100%] hidden md:flex">
           <Image src={illustrationSVG} alt="Illustration" width={300} />
         </div>

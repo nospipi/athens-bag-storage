@@ -190,12 +190,7 @@ const Map = () => {
       />
       <div
         ref={mapContainer}
-        style={{
-          flex: 1,
-          borderRadius: "20px",
-          border: "2px solid #ffffff",
-          boxShadow: "0 0 5px rgba(0, 0, 0, 0.5)",
-        }}
+        className="flex-1 rounded-[30px] shadow-[-5px_5px_15px_rgba(0,0,0,0.3)] h-full border-2 border-[dodgerblue]"
       />
     </div>
   );
