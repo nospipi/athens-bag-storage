@@ -23,7 +23,7 @@ export default {
         "custom-700": "700px",
         md: "850px",
         "h-sm": {
-          raw: "(max-height: 700px)",
+          raw: "(max-height: 840px)",
         },
       },
       textShadow: {
