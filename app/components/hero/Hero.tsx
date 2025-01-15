@@ -36,7 +36,7 @@ const Hero = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           <Image
             src={illustration1Svg}
             alt="Illustration"
-            className="w-[250px] md:w-[300px] h-sm:w-[185px]"
+            className="w-[250px] md:w-[300px] h-sm:w-[185px] h-full"
           />
         </div>
         <div className="text-sm flex flex-col gap-2">
