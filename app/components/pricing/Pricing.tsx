@@ -160,7 +160,7 @@ const Pricing = async ({ locale }: { locale: SupportedLocaleTypes }) => {
                 {translations("large")}
               </TableCell>
               <TableCell colSpan={3}>
-                {translations("up_to")} to 90cm x 40cm x 40cm
+                {translations("up_to")} 90cm x 40cm x 40cm
               </TableCell>
             </TableRow>
             <TableRow>
@@ -173,7 +173,7 @@ const Pricing = async ({ locale }: { locale: SupportedLocaleTypes }) => {
                 {translations("small")}
               </TableCell>
               <TableCell colSpan={3}>
-                {translations("up_to")} 19.69 in x 11.81 in x 7.87 in
+                {translations("up_to")} 20 in. x 12 in. x 8 in.
               </TableCell>
             </TableRow>
             <TableRow>
@@ -181,7 +181,7 @@ const Pricing = async ({ locale }: { locale: SupportedLocaleTypes }) => {
                 {translations("medium")}
               </TableCell>
               <TableCell colSpan={3}>
-                {translations("up_to")} 25.59 in x 19.69 in x 9.84 in
+                {translations("up_to")} 26 in. x 20 in. x 10 in.
               </TableCell>
             </TableRow>
             <TableRow>
@@ -189,7 +189,7 @@ const Pricing = async ({ locale }: { locale: SupportedLocaleTypes }) => {
                 {translations("large")}
               </TableCell>
               <TableCell colSpan={3}>
-                {translations("up_to")} 35.43 in x 15.75 in x 15.75 in
+                {translations("up_to")} 36 in. x 16 in. x 16 in.
               </TableCell>
             </TableRow>
           </TableFooter>
