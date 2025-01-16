@@ -1,11 +1,11 @@
 import { SupportedLocaleTypes } from "@/locales";
-import Questions from "../components/questions/Questions";
-import ContactUs from "../components/contact_us/ContactUs";
 import Header from "../components/header/Header";
 import Hero from "../components/hero/Hero";
 import HowToFindUs from "../components/how_to_find_us/HowToFindUs";
 import Pricing from "../components/pricing/Pricing";
-
+import Questions from "../components/questions/Questions";
+import ContactUs from "../components/contact_us/ContactUs";
+import Footer from "../components/footer/Footer";
 import _ from "lodash";
 
 //----------------------------------------------------------------------
@@ -25,6 +25,7 @@ export default async function IndexPage({ params }: Props) {
       <Pricing locale={locale} />
       <Questions locale={locale} />
       <ContactUs locale={locale} />
+      <Footer />
     </div>
   );
 }

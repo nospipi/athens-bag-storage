@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { CiGlobe } from "react-icons/ci";
 import { RxCaretDown } from "react-icons/rx";
-import { SupportedLocaleTypes } from "@/locales";
 import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import OutsideClickHandler from "react-outside-click-handler";
@@ -11,7 +10,7 @@ import LanguageButton from "./LanguagePopoverButton.client";
 
 //-------------------------------------------------------------------------
 
-const LanguageChanger = ({ locale }: { locale: SupportedLocaleTypes }) => {
+const LanguageChanger = () => {
   const translations = useTranslations();
   const currentLocale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
