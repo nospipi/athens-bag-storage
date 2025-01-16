@@ -1,15 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { BiMenu } from "react-icons/bi";
-import { IoClose } from "react-icons/io5";
 import { RiMoneyEuroCircleLine } from "react-icons/ri";
 import { FaRegQuestionCircle } from "react-icons/fa";
 import { LuMessageCircle } from "react-icons/lu";
 import { MdMyLocation } from "react-icons/md";
 import { motion } from "framer-motion";
 import OutsideClickHandler from "react-outside-click-handler";
-import { Squash as Hamburger, Squash } from "hamburger-react";
+import { Squash } from "hamburger-react";
+import Link from "next/link";
 
 //-------------------------------------------------------------------------
 
@@ -30,7 +29,7 @@ const Menu = () => {
     >
       <motion.div
         onClick={handleToggle}
-        className={`md:hidden fixed top-8 right-5 bg-transparent transition-transform transform cursor-pointer flex flex-col items-end rounded-[20px] select-none`}
+        className={`md:hidden fixed top-8 right-3 bg-transparent transition-transform transform cursor-pointer flex flex-col items-end rounded-[20px] select-none`}
         initial={{
           backgroundColor: "transparent",
           boxShadow: "none",
@@ -73,38 +72,38 @@ const Menu = () => {
           }}
           className="overflow-hidden w-full flex flex-col px-2 pb-2 -mt-[6px]"
         >
-          <a
+          <Link
             href="/#how-to-find-us"
             rel="noopener noreferrer"
             className="flex items-center justify-between gap-2 text-xs px-3 py-2 rounded-full bg-transparent hover:bg-white disabled:opacity-50"
           >
             <span>How to find us</span>
             <MdMyLocation size={14} />
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#how-to-find-us"
             rel="noopener noreferrer"
             className="flex items-center justify-between gap-2 text-xs px-3 py-2 rounded-full bg-transparent hover:bg-white disabled:opacity-50"
           >
             <span>Pricing</span>
             <RiMoneyEuroCircleLine size={14} />
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#how-to-find-us"
             rel="noopener noreferrer"
             className="flex items-center justify-between gap-2 text-xs px-3 py-2 rounded-full bg-transparent hover:bg-white disabled:opacity-50"
           >
             <span>FAQ</span>
             <FaRegQuestionCircle size={13} />
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#how-to-find-us"
             rel="noopener noreferrer"
             className="flex items-center justify-between gap-2 text-xs px-3 py-2 rounded-full bg-transparent hover:bg-white disabled:opacity-50"
           >
             <span>Contact us</span>
             <LuMessageCircle size={13} />
-          </a>
+          </Link>
         </motion.div>
       </motion.div>
     </OutsideClickHandler>

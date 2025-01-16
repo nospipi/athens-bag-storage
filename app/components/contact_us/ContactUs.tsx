@@ -6,6 +6,7 @@ import { MdAlternateEmail } from "react-icons/md";
 import Image from "next/image";
 import illustrationSVG from "@/public/illustration2.svg";
 import Form from "./Form";
+import Link from "next/link";
 
 //-------------------------------------------------------------------------
 
@@ -29,7 +30,7 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
       </div>
       <div className="flex flex-col flex-1 p-4 gap-4">
         <div className="flex flex-row flex-wrap gap-4">
-          <a
+          <Link
             href={`tel:+306947845332`}
             target="_blank"
             rel="noopener noreferrer"
@@ -37,8 +38,8 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           >
             <BsTelephoneFill size={20} />
             <span>+30 6941788654</span>
-          </a>
-          <a
+          </Link>
+          <Link
             href={`tel:+306947845332`}
             target="_blank"
             rel="noopener noreferrer"
@@ -46,8 +47,8 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           >
             <BsTelephoneFill size={20} />
             <span>+30 6947845332</span>
-          </a>
-          <a
+          </Link>
+          <Link
             href={`mailto:info@athensbagstorage.com`}
             target="_blank"
             rel="noopener noreferrer"
@@ -55,7 +56,7 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           >
             <MdAlternateEmail size={22} />
             <span>info@athensbagstorage.com</span>
-          </a>
+          </Link>
         </div>
         <div className="flex flex-row flex-1">
           <Form />

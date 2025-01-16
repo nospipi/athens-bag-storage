@@ -24,14 +24,14 @@ const Hero = async ({ locale }: { locale: SupportedLocaleTypes }) => {
             <p className="text-sm md:text-xl text-left">
               {translations("hero_subheading")}
             </p>
-            <a
+            <Link
               href={`#${_.kebabCase(
                 translations("how_to_find_us")
               ).toLowerCase()}`}
               className="bg-yellow-500 text-gray-900 font-semibold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105"
             >
               {translations("hero_button")}
-            </a>
+            </Link>
           </div>
           <Image
             src={illustration1Svg}

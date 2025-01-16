@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SupportedLocaleTypes } from "@/locales";
 import Map from "./Map.client";
+import Link from "next/link";
 import Image from "next/image";
 import illustrationSVG from "@/public/illustration4.svg";
 import _ from "lodash";
@@ -27,14 +28,14 @@ const HowToFindUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
         </p>
       </div>
       <div className="flex flex-col gap-4 p-4 flex-1 w-full h-full">
-        <a
+        <Link
           href={`https://www.google.com/maps/place/37.985727121782325,23.71909543003348`}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-yellow-500 font-semibold py-3 px-8 rounded-full shadow-lg transition transform hover:scale-105 self-start"
         >
           {translations("navigate")}
-        </a>
+        </Link>
         <div className="flex flex-row flex-1">
           <div className="flex items-center justify-center flex-1 hidden md:flex">
             <Image src={illustrationSVG} alt="Illustration" width={350} />

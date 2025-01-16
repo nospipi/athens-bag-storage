@@ -1,3 +1,7 @@
+import Link from "next/link";
+
+//--------------------------------------------------------------------------------------------------------------
+
 const Footer = () => {
   return (
     //className="w-full h-[100dvh] bg-gradient-to-b from-pink-300 to-blue-300 flex flex-col"
@@ -11,22 +15,22 @@ const Footer = () => {
             to delivering the best experience.
           </p>
           <p className="font-semibold">Contact us:</p>
-          <a
+          <Link
             href={`mailto:info@athensbagstorage.com`}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 hover:text-gray-400 transition"
           >
             Email: info@athensbagstorage.com
-          </a>
-          <a
+          </Link>
+          <Link
             href={`tel:+306947845332`}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-400 transition"
           >
             Phone: +30 6947845332
-          </a>
+          </Link>
         </div>
 
         {/* Navigation Section */}
@@ -34,27 +38,30 @@ const Footer = () => {
           <h2 className="text-2xl font-bold mb-4">Quick Links</h2>
           <ul className="space-y-2">
             <li>
-              <a
+              <Link
                 href="/#how-to-find-us"
                 className="hover:text-gray-400 transition"
               >
                 How to Find Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#pricing" className="hover:text-gray-400 transition">
+              <Link href="/#pricing" className="hover:text-gray-400 transition">
                 Pricing
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#faq" className="hover:text-gray-400 transition">
+              <Link href="/#faq" className="hover:text-gray-400 transition">
                 FAQ
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#contact-us" className="hover:text-gray-400 transition">
+              <Link
+                href="/#contact-us"
+                className="hover:text-gray-400 transition"
+              >
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -63,7 +70,7 @@ const Footer = () => {
         <div>
           <h2 className="text-2xl font-bold mb-4">Connect with Us</h2>
           <div className="flex space-x-6 mb-4">
-            <a
+            <Link
               href="https://facebook.com"
               className="hover:text-gray-400 transition"
             >
@@ -79,8 +86,11 @@ const Footer = () => {
                   clipRule="evenodd"
                 />
               </svg>
-            </a>
-            <a href="https://x.com" className="hover:text-gray-400 transition">
+            </Link>
+            <Link
+              href="https://x.com"
+              className="hover:text-gray-400 transition"
+            >
               <svg
                 className="w-6 h-6"
                 fill="currentColor"
@@ -89,8 +99,8 @@ const Footer = () => {
               >
                 <path d="M23.643 4.937c-.835.37-1.73.623-2.675.735a4.658 4.658 0 0 0 2.048-2.568 9.317 9.317 0 0 1-2.953 1.127 4.65 4.65 0 0 0-7.91 4.24 13.179 13.179 0 0 1-9.573-4.847 4.651 4.651 0 0 0 1.44 6.196 4.604 4.604 0 0 1-2.104-.583v.059a4.653 4.653 0 0 0 3.731 4.558 4.618 4.618 0 0 1-2.094.08 4.654 4.654 0 0 0 4.346 3.234 9.308 9.308 0 0 1-5.761 1.985c-.375 0-.744-.022-1.11-.065a13.153 13.153 0 0 0 7.122 2.084c8.545 0 13.211-7.075 13.211-13.211 0-.201-.004-.4-.014-.598A9.446 9.446 0 0 0 24 4.557a9.292 9.292 0 0 1-2.357.645z" />
               </svg>
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://linkedin.com"
               className="hover:text-gray-400 transition"
             >
@@ -106,7 +116,7 @@ const Footer = () => {
                   clipRule="evenodd"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
           <p>
             &copy; {new Date().getFullYear()} athensbagstorage.com - All rights
