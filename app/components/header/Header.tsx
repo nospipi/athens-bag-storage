@@ -2,11 +2,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SupportedLocaleTypes } from "@/locales";
 import Image from "next/image";
 import logo from "@/public/logo.png";
-import { BiMenu } from "react-icons/bi";
 import Link from "next/link";
 import BlurBackground from "./BlurBackground.client";
-import LanguageChanger from "../language_selector/LanguageChanger2.client";
-import Menu from "./Menu";
+import LanguageChanger from "../language_selector/LanguageChanger.client";
+import Menu from "./Menu.client";
 import _ from "lodash";
 
 //----------------------------------------------------------------------

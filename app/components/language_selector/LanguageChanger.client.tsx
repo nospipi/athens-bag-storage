@@ -29,7 +29,7 @@ const LanguageChanger = () => {
     >
       <motion.div
         onClick={handleToggle}
-        className={`fixed top-8 left-3 cursor-pointer flex flex-col items-center p-2 rounded-[20px] select-none gap-2`}
+        className={`fixed top-7 left-3 cursor-pointer flex flex-col items-center p-2 rounded-[20px] select-none gap-2`}
         initial={{
           backgroundColor: "transparent",
           boxShadow: "none",

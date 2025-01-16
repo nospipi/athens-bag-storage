@@ -48,14 +48,3 @@ const HowToFindUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
 };
 
 export default HowToFindUs;
-
-// Google Maps Implementation
-// <div className="flex-1">
-//   <iframe
-//     title="Google Map"
-//     src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3144.6315497783326!2d23.7190954!3d37.9857271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzfCsDU5JzA4LjYiTiAyM8KwNDMnMDguNyJF!5e0!3m2!1sen!2sgr!4v1736874054152!5m2!1sen!2sgr"
-//     allowFullScreen
-//     loading="lazy"
-//     className="rounded-2xl w-full h-full"
-//   />
-// </div>;

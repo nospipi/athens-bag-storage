@@ -3,7 +3,6 @@
 import { useRef, useState, useEffect, useMemo } from "react";
 import mapboxgl, { LngLatLike } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import MapClientMarker from "./MapClientMarker";
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN as string;
 
 //---------------------------------------------------------
@@ -16,14 +15,6 @@ type PickupCoordinates = {
 type PickupCoordinatesList = PickupCoordinates[];
 
 const Map = () => {
-  const [devicePosition, setDevicePosition] = useState<[number, number]>([
-    0, 0,
-  ]);
-  const [shouldWatchDevicePosition, setShouldWatchDevicePosition] =
-    useState<boolean>(false);
-  //   const [watchId, setWatchId] = useState<number | null>(null);
-  //   const [shouldFollowVehicle, setShouldFollowVehicle] = useState<boolean>(true);
-  const [shouldFollowClient, setShouldFollowClient] = useState<boolean>(false);
   const lenorman12Coordinates: LngLatLike = useMemo(() => {
     return [23.719046328113603, 37.98568449280477];
   }, []);
@@ -48,7 +39,6 @@ const Map = () => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const [map, setMap] = useState<mapboxgl.Map | null>(null);
 
-  //,,,,
   //map initialization
   useEffect(() => {
     if (mapContainer.current && map === null) {
@@ -182,12 +172,6 @@ const Map = () => {
         height: "100%",
       }}
     >
-      <MapClientMarker
-        map={map}
-        clientPosition={devicePosition}
-        shouldFollowClient={shouldFollowClient}
-        shouldWatchDevicePosition={shouldWatchDevicePosition}
-      />
       <div
         ref={mapContainer}
         className="flex-1 shadow-[-5px_5px_15px_rgba(0,0,0,0.3)] h-full rounded-br-[25px] rounded-3xl"

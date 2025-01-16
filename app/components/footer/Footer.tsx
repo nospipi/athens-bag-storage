@@ -7,13 +7,6 @@ import x_com from "@/public/x_com.png";
 
 //--------------------------------------------------------------------------------------------------------------
 
-// <Image
-//   src={bag}
-//   alt="Athens Bag Storage Logo"
-//   width={50}
-//   height={50}
-// />;
-
 const Footer = async ({ locale }: { locale: SupportedLocaleTypes }) => {
   setRequestLocale(locale);
   const translations = await getTranslations();

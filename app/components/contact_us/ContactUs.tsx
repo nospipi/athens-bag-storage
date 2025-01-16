@@ -7,7 +7,6 @@ import Image from "next/image";
 import illustrationSVG from "@/public/illustration2.svg";
 import Form from "./Form";
 import Link from "next/link";
-import Footer from "../footer/Footer";
 
 //-------------------------------------------------------------------------
 
