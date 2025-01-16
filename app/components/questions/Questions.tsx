@@ -75,7 +75,6 @@ const Questions = async ({ locale }: { locale: SupportedLocaleTypes }) => {
                 <li>• {translations("terms_of_service_6")}</li>
                 <li>• {translations("terms_of_service_7")}</li>
                 <li>• {translations("terms_of_service_8")}</li>
-                <li>• {translations("terms_of_service_9")}</li>
               </ul>
             </AccordionContent>
           </AccordionItem>

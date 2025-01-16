@@ -1,9 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SupportedLocaleTypes } from "@/locales";
 import _ from "lodash";
+import x_com from "@/public/x_com.png";
 
 //--------------------------------------------------------------------------------------------------------------
+
+// <Image
+//   src={bag}
+//   alt="Athens Bag Storage Logo"
+//   width={50}
+//   height={50}
+// />;
 
 const Footer = async ({ locale }: { locale: SupportedLocaleTypes }) => {
   setRequestLocale(locale);
@@ -12,8 +21,7 @@ const Footer = async ({ locale }: { locale: SupportedLocaleTypes }) => {
   return (
     <footer className="py-12 text-sm">
       <div className="container mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-12">
-        {/* Company Info Section */}
-        <div className="flex flex-col">
+        <div className="flex flex-col border-l-[3px] border-l-[dodgerblue] pl-4">
           <h2 className="text-[20px] font-bold mb-4">Athens Bag Storage</h2>
           <p className="mb-4">{translations("footer_description")}</p>
           <p className="font-semibold">{translations("contact_us")}:</p>
@@ -35,8 +43,7 @@ const Footer = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           </Link>
         </div>
 
-        {/* Navigation Section */}
-        <div>
+        <div className="flex flex-col border-l-[3px] border-l-[dodgerblue] pl-4">
           <h2 className="text-[20px] font-bold mb-4">
             {translations("footer_quick_links")}
           </h2>
@@ -82,8 +89,7 @@ const Footer = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           </ul>
         </div>
 
-        {/* Social Media and Legal Section */}
-        <div>
+        <div className="flex flex-col border-l-[3px] border-l-[dodgerblue] pl-4">
           <h2 className="text-[20px] font-bold mb-4">
             {translations("footer_connect_with_us")}
           </h2>
@@ -91,6 +97,8 @@ const Footer = async ({ locale }: { locale: SupportedLocaleTypes }) => {
             <Link
               href="https://facebook.com"
               className="hover:text-gray-400 transition"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 className="w-6 h-6"
@@ -107,20 +115,17 @@ const Footer = async ({ locale }: { locale: SupportedLocaleTypes }) => {
             </Link>
             <Link
               href="https://x.com"
-              className="hover:text-gray-400 transition"
+              className="hover:opacity-50 transition"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <svg
-                className="w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M23.643 4.937c-.835.37-1.73.623-2.675.735a4.658 4.658 0 0 0 2.048-2.568 9.317 9.317 0 0 1-2.953 1.127 4.65 4.65 0 0 0-7.91 4.24 13.179 13.179 0 0 1-9.573-4.847 4.651 4.651 0 0 0 1.44 6.196 4.604 4.604 0 0 1-2.104-.583v.059a4.653 4.653 0 0 0 3.731 4.558 4.618 4.618 0 0 1-2.094.08 4.654 4.654 0 0 0 4.346 3.234 9.308 9.308 0 0 1-5.761 1.985c-.375 0-.744-.022-1.11-.065a13.153 13.153 0 0 0 7.122 2.084c8.545 0 13.211-7.075 13.211-13.211 0-.201-.004-.4-.014-.598A9.446 9.446 0 0 0 24 4.557a9.292 9.292 0 0 1-2.357.645z" />
-              </svg>
+              <Image src={x_com} alt="X.com Logo" width={23} height={23} />
             </Link>
             <Link
               href="https://linkedin.com"
               className="hover:text-gray-400 transition"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 className="w-6 h-6"

@@ -14,5 +14,5 @@ export default function Error({ error }: Props) {
     console.error(error);
   }, [error]);
 
-  return <div>{translations("error_message")}</div>;
+  return translations("error_message");
 }

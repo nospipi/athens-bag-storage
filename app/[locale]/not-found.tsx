@@ -5,6 +5,5 @@ import { useTranslations } from "next-intl";
 
 export default function NotFoundPage() {
   const translations = useTranslations();
-
-  return <p className="max-w-[460px]">{translations("not_found_message")}</p>;
+  return translations("not_found_message");
 }

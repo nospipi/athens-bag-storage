@@ -24,13 +24,13 @@ export const metadata: Metadata = {
 
 //-------------------------------------------------------------------------
 
-export default async function LocaleLayout({
+const LocaleLayout = async ({
   children,
   params,
 }: {
   children: React.ReactNode;
   params: Promise<{ locale: SupportedLocaleTypes }>;
-}) {
+}) => {
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
@@ -59,10 +59,6 @@ export default async function LocaleLayout({
       </body>
     </html>
   );
-}
+};
 
-{
-  /* <html lang="en" suppressHydrationWarning>
-  <body className={montserrat.className}>{children}</body>
-</html>; */
-}
+export default LocaleLayout;
