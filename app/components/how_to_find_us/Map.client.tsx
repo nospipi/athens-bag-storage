@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState, useEffect, useMemo } from "react";
-import LocationCard from "./LocationCard";
 import mapboxgl, { LngLatLike } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import MapClientMarker from "./MapClientMarker";
