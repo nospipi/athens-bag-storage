@@ -7,6 +7,7 @@ import Image from "next/image";
 import illustrationSVG from "@/public/illustration2.svg";
 import Form from "./Form";
 import Link from "next/link";
+import Footer from "../footer/Footer";
 
 //-------------------------------------------------------------------------
 
@@ -17,7 +18,7 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
   return (
     <section
       id={_.kebabCase(translations("contact_us"))}
-      className="w-full h-[100dvh] bg-gradient-to-b from-pink-300 to-blue-300 flex flex-col"
+      className="w-full h-[100dvh] bg-gradient-to-b from-pink-300 to-white/0 flex flex-col"
     >
       <div className="mock-header w-full min-h-[140px] sm:min-h-[160px]" />
       <div className="text-left bg-black bg-opacity-30 w-full p-4 flex flex-col gap-4 border-b-2 border-white">
@@ -65,6 +66,7 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           </div>
         </div>
       </div>
+      <Footer />
     </section>
   );
 };

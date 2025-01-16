@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Company Info Section */}
         <div className="flex flex-col">
-          <h2 className="text-2xl font-bold mb-4">Athens Bag Storage</h2>
+          <h2 className="text-[20px] font-bold mb-4">Athens Bag Storage</h2>
           <p className="mb-4">
             We provide top-notch luggage storage services. Our team is committed
             to delivering the best experience.
@@ -35,7 +35,7 @@ const Footer = () => {
 
         {/* Navigation Section */}
         <div>
-          <h2 className="text-2xl font-bold mb-4">Quick Links</h2>
+          <h2 className="text-[20px] font-bold mb-4">Quick Links</h2>
           <ul className="space-y-2">
             <li>
               <Link
@@ -68,7 +68,7 @@ const Footer = () => {
 
         {/* Social Media and Legal Section */}
         <div>
-          <h2 className="text-2xl font-bold mb-4">Connect with Us</h2>
+          <h2 className="text-[20px] font-bold mb-4">Connect with Us</h2>
           <div className="flex space-x-6 mb-4">
             <Link
               href="https://facebook.com"
