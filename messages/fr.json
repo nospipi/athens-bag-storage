@@ -53,8 +53,13 @@
   "send_us_a_message": "Envoyez-nous un message",
   "name": "Nom",
   "email": "Email",
+  "phone": "Téléphone",
   "your_message": "Votre message",
   "submit_message": "Envoyer le message",
   "message_sent_successfully": "Message envoyé avec succès, Merci!",
-  "message_error": "Une erreur s'est produite lors de l'envoi du message, veuillez réessayer plus tard."
+  "message_error": "Une erreur s'est produite lors de l'envoi du message, veuillez réessayer plus tard.",
+  "footer_description": "Nous offrons des services de stockage de bagages de première classe. Notre équipe s'efforce de vous offrir la meilleure expérience.",
+  "footer_quick_links": "Liens rapides",
+  "footer_connect_with_us": "Connectez-vous avec nous",
+  "footer_all_rights_reserved": "Tous droits réservés"
 }

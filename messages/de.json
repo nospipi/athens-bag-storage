@@ -53,8 +53,13 @@
   "send_us_a_message": "Senden Sie uns eine Nachricht",
   "name": "Name",
   "email": "Email",
+  "phone": "Telefon",
   "your_message": "Ihre Nachricht",
   "submit_message": "Nachricht senden",
   "message_sent_successfully": "Nachricht erfolgreich gesendet, Danke!",
-  "message_error": "Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
+  "message_error": "Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.",
+  "footer_description": "Wir bieten erstklassige Gepäckaufbewahrungsdienste. Unser Team ist bestrebt, Ihnen das beste Erlebnis zu bieten.",
+  "footer_quick_links": "Schnelle Links",
+  "footer_connect_with_us": "Verbinde dich mit uns",
+  "footer_all_rights_reserved": "Alle Rechte vorbehalten"
 }

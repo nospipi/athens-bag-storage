@@ -25,7 +25,7 @@ export default async function IndexPage({ params }: Props) {
       <Pricing locale={locale} />
       <Questions locale={locale} />
       <ContactUs locale={locale} />
-
+      <Footer locale={locale} />
     </div>
   );
 }

@@ -9,11 +9,14 @@ import { motion } from "framer-motion";
 import OutsideClickHandler from "react-outside-click-handler";
 import { Squash } from "hamburger-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+import _ from "lodash";
 
 //-------------------------------------------------------------------------
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const translations = useTranslations();
 
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
@@ -73,36 +76,35 @@ const Menu = () => {
           className="overflow-hidden w-full flex flex-col px-2 pb-2 -mt-[6px]"
         >
           <Link
-            href="/#how-to-find-us"
-            rel="noopener noreferrer"
+            href={`#${_.kebabCase(
+              translations("how_to_find_us")
+            ).toLowerCase()}`}
             className="flex items-center justify-between gap-2 text-xs px-3 py-2 rounded-full bg-transparent hover:bg-white disabled:opacity-50"
           >
-            <span>How to find us</span>
-            <MdMyLocation size={14} />
+            <span>{translations("how_to_find_us")}</span>
+            <MdMyLocation size={16} />
           </Link>
           <Link
-            href="/#how-to-find-us"
-            rel="noopener noreferrer"
+            href={`#${_.kebabCase(translations("pricing")).toLowerCase()}`}
             className="flex items-center justify-between gap-2 text-xs px-3 py-2 rounded-full bg-transparent hover:bg-white disabled:opacity-50"
           >
-            <span>Pricing</span>
-            <RiMoneyEuroCircleLine size={14} />
+            <span>{translations("pricing")}</span>
+            <RiMoneyEuroCircleLine size={16} />
           </Link>
           <Link
-            href="/#how-to-find-us"
-            rel="noopener noreferrer"
+            href={`#${_.kebabCase(translations("questions")).toLowerCase()}`}
             className="flex items-center justify-between gap-2 text-xs px-3 py-2 rounded-full bg-transparent hover:bg-white disabled:opacity-50"
           >
-            <span>FAQ</span>
-            <FaRegQuestionCircle size={13} />
+            <span>{translations("questions")}</span>
+            <FaRegQuestionCircle size={14} />
           </Link>
           <Link
-            href="/#how-to-find-us"
+            href={`#${_.kebabCase(translations("contact_us")).toLowerCase()}`}
             rel="noopener noreferrer"
             className="flex items-center justify-between gap-2 text-xs px-3 py-2 rounded-full bg-transparent hover:bg-white disabled:opacity-50"
           >
-            <span>Contact us</span>
-            <LuMessageCircle size={13} />
+            <span> {translations("contact_us")}</span>
+            <LuMessageCircle size={14} />
           </Link>
         </motion.div>
       </motion.div>

@@ -66,7 +66,6 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           </div>
         </div>
       </div>
-      <Footer />
     </section>
   );
 };

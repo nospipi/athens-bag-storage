@@ -1,27 +1,29 @@
 import Link from "next/link";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { SupportedLocaleTypes } from "@/locales";
+import _ from "lodash";
 
 //--------------------------------------------------------------------------------------------------------------
 
-const Footer = () => {
+const Footer = async ({ locale }: { locale: SupportedLocaleTypes }) => {
+  setRequestLocale(locale);
+  const translations = await getTranslations();
+
   return (
-    //className="w-full h-[100dvh] bg-gradient-to-b from-pink-300 to-blue-300 flex flex-col"
     <footer className="py-12 text-sm">
       <div className="container mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Company Info Section */}
         <div className="flex flex-col">
           <h2 className="text-[20px] font-bold mb-4">Athens Bag Storage</h2>
-          <p className="mb-4">
-            We provide top-notch luggage storage services. Our team is committed
-            to delivering the best experience.
-          </p>
-          <p className="font-semibold">Contact us:</p>
+          <p className="mb-4">{translations("footer_description")}</p>
+          <p className="font-semibold">{translations("contact_us")}:</p>
           <Link
             href={`mailto:info@athensbagstorage.com`}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 hover:text-gray-400 transition"
           >
-            Email: info@athensbagstorage.com
+            {translations("email")}: info@athensbagstorage.com
           </Link>
           <Link
             href={`tel:+306947845332`}
@@ -29,38 +31,52 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="hover:text-gray-400 transition"
           >
-            Phone: +30 6947845332
+            {translations("phone")}: +30 6947845332
           </Link>
         </div>
 
         {/* Navigation Section */}
         <div>
-          <h2 className="text-[20px] font-bold mb-4">Quick Links</h2>
+          <h2 className="text-[20px] font-bold mb-4">
+            {translations("footer_quick_links")}
+          </h2>
           <ul className="space-y-2">
             <li>
               <Link
-                href="/#how-to-find-us"
+                href={`#${_.kebabCase(
+                  translations("how_to_find_us")
+                ).toLowerCase()}`}
                 className="hover:text-gray-400 transition"
               >
-                How to Find Us
-              </Link>
-            </li>
-            <li>
-              <Link href="/#pricing" className="hover:text-gray-400 transition">
-                Pricing
-              </Link>
-            </li>
-            <li>
-              <Link href="/#faq" className="hover:text-gray-400 transition">
-                FAQ
+                {translations("how_to_find_us")}
               </Link>
             </li>
             <li>
               <Link
-                href="/#contact-us"
+                href={`#${_.kebabCase(translations("pricing")).toLowerCase()}`}
                 className="hover:text-gray-400 transition"
               >
-                Contact Us
+                {translations("pricing")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`#${_.kebabCase(
+                  translations("questions")
+                ).toLowerCase()}`}
+                className="hover:text-gray-400 transition"
+              >
+                {translations("questions")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`#${_.kebabCase(
+                  translations("contact_us")
+                ).toLowerCase()}`}
+                className="hover:text-gray-400 transition"
+              >
+                {translations("contact_us")}
               </Link>
             </li>
           </ul>
@@ -68,7 +84,9 @@ const Footer = () => {
 
         {/* Social Media and Legal Section */}
         <div>
-          <h2 className="text-[20px] font-bold mb-4">Connect with Us</h2>
+          <h2 className="text-[20px] font-bold mb-4">
+            {translations("footer_connect_with_us")}
+          </h2>
           <div className="flex space-x-6 mb-4">
             <Link
               href="https://facebook.com"
@@ -119,8 +137,8 @@ const Footer = () => {
             </Link>
           </div>
           <p>
-            &copy; {new Date().getFullYear()} athensbagstorage.com - All rights
-            reserved.
+            &copy; {new Date().getFullYear()} athensbagstorage.com -{" "}
+            {translations("footer_all_rights_reserved")}
           </p>
         </div>
       </div>

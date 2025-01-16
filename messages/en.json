@@ -54,8 +54,13 @@
   "send_us_a_message": "Send us a message",
   "name": "Name",
   "email": "Email",
+  "phone": "Phone",
   "your_message": "Your message",
   "submit_message": "Submit message",
   "message_sent_successfully": "Message sent successfully, Thank you !",
-  "message_error": "An error occurred while sending the message, please try again later."
+  "message_error": "An error occurred while sending the message, please try again later.",
+  "footer_description": "We provide top-notch luggage storage services. Our team is committed to delivering the best experience.",
+  "footer_quick_links": "Quick Links",
+  "footer_connect_with_us": "Connect with us",
+  "footer_all_rights_reserved": "All rights reserved"
 }

@@ -54,8 +54,13 @@
   "send_us_a_message": "Envíanos un mensaje",
   "name": "Nombre",
   "email": "Correo electrónico",
+  "phone": "Teléfono",
   "your_message": "Tu mensaje",
   "submit_message": "Enviar mensaje",
   "message_sent_successfully": "Mensaje enviado con éxito, Gracias!",
-  "message_error": "Se produjo un error al enviar el mensaje, inténtelo de nuevo más tarde."
+  "message_error": "Se produjo un error al enviar el mensaje, inténtelo de nuevo más tarde.",
+  "footer_description": "Ofrecemos servicios de almacenamiento de equipaje de primer nivel. Nuestro equipo está comprometido a brindar la mejor experiencia.",
+  "footer_quick_links": "Enlaces rápidos",
+  "footer_connect_with_us": "Conéctate con nosotros",
+  "footer_all_rights_reserved": "Todos los derechos reservados"
 }
