@@ -8,6 +8,7 @@ import { SupportedLocaleTypes } from "@/locales";
 import type { Metadata } from "next";
 import Head from "next/head";
 import { Montserrat } from "next/font/google";
+import Script from "next/script";
 
 //-------------------------------------------------------------------------
 
@@ -45,6 +46,10 @@ const LocaleLayout = async ({
   return (
     <html lang={locale} suppressHydrationWarning>
       <Head>
+        <Script
+          strategy="beforeInteractive"
+          src={`https://cdn-cookieyes.com/client_data/9a1783fd70bc4e6ede8dbc23/script.js`}
+        ></Script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <body className={montserrat.className}>
