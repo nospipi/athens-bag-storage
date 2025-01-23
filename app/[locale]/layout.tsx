@@ -46,12 +46,12 @@ const LocaleLayout = async ({
   return (
     <html lang={locale} suppressHydrationWarning>
       <Head>
-        <Script
-          strategy="beforeInteractive"
-          src={`https://cdn-cookieyes.com/client_data/9a1783fd70bc4e6ede8dbc23/script.js`}
-        ></Script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
+      <Script
+        strategy="beforeInteractive"
+        src={`https://cdn-cookieyes.com/client_data/${process.env.COOKIE_YES_KEY}/script.js`}
+      ></Script>
       <body className={montserrat.className}>
         <NextIntlClientProvider messages={messages}>
           <AppRouterCacheProvider>
