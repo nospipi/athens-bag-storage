@@ -6,7 +6,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { getMessages } from "next-intl/server";
 import { SupportedLocaleTypes } from "@/locales";
 import type { Metadata } from "next";
-import Head from "next/head";
 import { Montserrat } from "next/font/google";
 import Script from "next/script";
 
