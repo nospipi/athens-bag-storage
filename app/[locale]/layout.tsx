@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   title: "Convenient Luggage Storage in Downtown Athens",
   description:
     "Explore Athens without the hassle of carrying your luggage. Safe, secure, and easy storage for all your travel needs",
+  viewport: "width=device-width, initial-scale=1",
 };
 
 //-------------------------------------------------------------------------
@@ -45,9 +46,6 @@ const LocaleLayout = async ({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
       <Script
         strategy="beforeInteractive"
         src={`https://cdn-cookieyes.com/client_data/${process.env.COOKIE_YES_KEY}/script.js`}
