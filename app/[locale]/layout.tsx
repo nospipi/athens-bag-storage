@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from "next-intl";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 //import { SpeedInsights } from "@vercel/speed-insights/next"; //only one for every hobby account on vercel
-import { Analytics } from "@vercel/analytics/next";
+//import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "@/components/ui/toaster";
 import { getMessages } from "next-intl/server";
 import { SupportedLocaleTypes } from "@/locales";
@@ -60,7 +60,7 @@ const LocaleLayout = async ({
           </AppRouterCacheProvider>
         </NextIntlClientProvider>
         {/* <SpeedInsights /> */}
-        <Analytics />
+        {/* <Analytics /> */}
       </body>
     </html>
   );
