@@ -31,7 +31,7 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
       <div className="flex flex-col flex-1 p-4 gap-4">
         <div className="flex flex-row flex-wrap gap-4">
           <Link
-            href={`tel:+306947845332`}
+            href={`tel:+306999999999`}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-500 text-gray-900 font-semibold py-3 px-5 rounded-full shadow-lg transition transform hover:scale-105 self-start text-white flex flex-row gap-4 items-center"
@@ -40,13 +40,13 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
             <span>+30 6941788654</span>
           </Link>
           <Link
-            href={`tel:+306947845332`}
+            href={`tel:+306999999999`}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-500 text-gray-900 font-semibold py-3 px-5 rounded-full shadow-lg transition transform hover:scale-105 self-start text-white flex flex-row gap-4 items-center"
           >
             <BsTelephoneFill size={20} />
-            <span>+30 6947845332</span>
+            <span>+30 6999999999</span>
           </Link>
           <Link
             href={`mailto:info@athensbagstorage.com`}

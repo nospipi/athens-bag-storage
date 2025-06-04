@@ -27,12 +27,12 @@ const Footer = async ({ locale }: { locale: SupportedLocaleTypes }) => {
             {translations("email")}: info@athensbagstorage.com
           </Link>
           <Link
-            href={`tel:+306947845332`}
+            href={`tel:+306999999999`}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-400 transition"
           >
-            {translations("phone")}: +30 6947845332
+            {translations("phone")}: +30 6999999999
           </Link>
         </div>
 
