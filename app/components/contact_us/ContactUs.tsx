@@ -30,7 +30,7 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
       </div>
       <div className="flex flex-col flex-1 p-4 gap-4">
         <div className="flex flex-row flex-wrap gap-4">
-          <Link
+          {/* <Link
             href={`tel:+306999999999`}
             target="_blank"
             rel="noopener noreferrer"
@@ -38,7 +38,7 @@ const ContactUs = async ({ locale }: { locale: SupportedLocaleTypes }) => {
           >
             <BsTelephoneFill size={20} />
             <span>+30 6941788654</span>
-          </Link>
+          </Link> */}
           <Link
             href={`tel:+306999999999`}
             target="_blank"
